@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth bg-[#FDFBF7]">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Academic Programs & Faculties at Govt. Graduate College Pattoki — Intermediate (FSc, ICS, ICom, FA) and BS 4-Year Honors Degree Programs affiliated with University of the Punjab.">
+  <title>Academic Programs & Faculties — Govt. Graduate College Pattoki</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans strictly (Single Global Font, No Serifs) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Custom Theme Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            academic: {
+              cream: '#FDFBF7',
+              beige: '#F5F2EB',
+              sand: '#EBE6DC',
+              green: '#064E3B',
+              darkgreen: '#022C22',
+              charcoal: '#292524',
+              muted: '#78716C',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Warm Academic Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FDFBF7;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #D6D3D1;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #064E3B;
+    }
+  </style>
+</head>
+
+<body class="bg-[#FDFBF7] text-stone-800 font-sans antialiased min-h-screen flex flex-col selection:bg-emerald-900 selection:text-white">
+
+  <!-- ========================================================================= -->
+  <!-- 1. SLIM FULL-WIDTH NAVBAR (Exact Match, 'Academics' Active)               -->
+  <!-- ========================================================================= -->
+  <header class="w-full fixed top-0 bg-white/95 backdrop-blur-md border-b border-stone-200 z-50 px-6 py-3 transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+
+      <!-- Left Side Links: Home, About, Academics (Active) -->
+      <nav aria-label="Primary Left Navigation" class="hidden md:flex items-center space-x-6 lg:space-x-8 flex-1 justify-end pr-6 lg:pr-8">
+        <a href="index.html" class="text-xs uppercase tracking-widest font-semibold text-stone-600 hover:text-emerald-950 transition-colors">
+          Home
+        </a>
+        <a href="about.html" class="text-xs uppercase tracking-widest font-semibold text-stone-600 hover:text-emerald-950 transition-colors">
+          About
+        </a>
+        <a href="academics.html" class="text-xs uppercase tracking-widest font-bold text-emerald-950 border-b-2 border-emerald-950 pb-0.5 transition-colors">
+          Academics
+        </a>
+      </nav>
+
+      <!-- Center Logo Strictly (src="./logo.png", class "h-10 w-auto object-contain", NO text) -->
+      <a href="index.html" class="flex-shrink-0 mx-auto md:mx-0 flex items-center justify-center focus:outline-none" aria-label="Govt. Graduate College Pattoki Home">
+        <img 
+          src="./logo.png" 
+          alt="Govt. Graduate College Pattoki" 
+          class="h-10 w-auto object-contain"
+          onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 48 48\' fill=\'%23064E3B\'><circle cx=\'24\' cy=\'24\' r=\'22\' fill=\'%23064E3B\'/><path d=\'M24 12L36 18L24 24L12 18L24 12Z\' fill=\'%23FFFFFF\'/><path d=\'M16 22V28C16 32.4 19.6 36 24 36C28.4 36 32 32.4 32 28V22L24 26L16 22Z\' fill=\'%23FFFFFF\'/></svg>';"
+        >
+      </a>
+
+      <!-- Right Side Links: Admissions, Sports, Contact -->
+      <nav aria-label="Primary Right Navigation" class="hidden md:flex items-center space-x-6 lg:space-x-8 flex-1 justify-start pl-6 lg:pl-8">
+        <a href="admissions.html" class="text-xs uppercase tracking-widest font-semibold text-stone-600 hover:text-emerald-950 transition-colors">
+          Admissions
+        </a>
+        <a href="sports.html" class="text-xs uppercase tracking-widest font-semibold text-stone-600 hover:text-emerald-950 transition-colors">
+          Sports
+        </a>
+        <a href="contact.html" class="text-xs uppercase tracking-widest font-semibold text-stone-600 hover:text-emerald-950 transition-colors">
+          Contact
+        </a>
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="flex items-center md:hidden">
+        <button id="mobile-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation menu" class="p-1.5 text-stone-700 hover:text-emerald-950 focus:outline-none">
+          <svg id="hamburger-icon" class="w-6 h-6 block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-stone-200 px-6 py-4 mt-3">
+      <nav class="flex flex-col space-y-3 text-center">
+        <a href="index.html" class="text-xs uppercase tracking-widest font-semibold text-stone-600 hover:text-emerald-950 py-1.5 border-b border-stone-100">Home</a>
+        <a href="about.html" class="text-xs uppercase tracking-widest font-semibold text-stone-600 hover:text-emerald-950 py-1.5 border-b border-stone-100">About</a>
+        <a href="academics.html" class="text-xs uppercase tracking-widest font-bold text-emerald-950 py-1.5 border-b border-stone-100">Academics</a>
+        <a href="admissions.html" class="text-xs uppercase tracking-widest font-semibold text-stone-600 hover:text-emerald-950 py-1.5 border-b border-stone-100">Admissions</a>
+        <a href="sports.html" class="text-xs uppercase tracking-widest font-semibold text-stone-600 hover:text-emerald-950 py-1.5 border-b border-stone-100">Sports</a>
+        <a href="contact.html" class="text-xs uppercase tracking-widest font-semibold text-stone-600 hover:text-emerald-950 py-1.5">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- 2. HERO BANNER (Academic Header with High-Contrast Dark Overlay)          -->
+  <!-- ========================================================================= -->
+  <main class="flex-grow pt-[57px]">
+    <section class="relative h-[44vh] min-h-[320px] max-h-[420px] w-full flex items-center justify-center text-center overflow-hidden border-b border-stone-800 bg-stone-900">
+      
+      <!-- Academic Background Image -->
+      <img 
+        src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=2000&q=85" 
+        alt="Academic Programs and Research at Govt. Graduate College Pattoki" 
+        class="absolute inset-0 w-full h-full object-cover object-center"
+        loading="eager"
+      >
+
+      <!-- Strong Dark Overlay per Mandate 2 -->
+      <div class="absolute inset-0 bg-slate-900/70 backdrop-blur-[1px]"></div>
+
+      <!-- Banner Content -->
+      <div class="relative z-10 max-w-4xl mx-auto px-6 py-8">
+        <!-- Breadcrumb Navigation -->
+        <nav aria-label="Breadcrumb" class="mb-3 flex items-center justify-center space-x-2 text-xs uppercase tracking-widest text-stone-300">
+          <a href="index.html" class="hover:text-white transition-colors">Home</a>
+          <span class="text-stone-400">/</span>
+          <span class="text-emerald-400 font-bold">Academics</span>
+        </nav>
+
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight uppercase leading-tight drop-shadow-sm">
+          Academic Programs & Faculties
+        </h1>
+        <p class="text-sm sm:text-base text-stone-200 font-normal max-w-xl mx-auto mt-2 drop-shadow">
+          Comprehensive pathways across higher secondary certifications and 4-Year undergraduate honors degrees affiliated with the University of the Punjab.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 3. DEGREE PROGRAMS SECTION (Clean Split Layout: Inter vs BS 4-Year)       -->
+    <!-- ========================================================================= -->
+    <section class="py-20 lg:py-28 bg-[#FDFBF7] border-b border-stone-200/80">
+      <div class="max-w-7xl mx-auto px-6 sm:px-8">
+        
+        <div class="max-w-3xl mb-14">
+          <span class="text-xs uppercase tracking-[0.25em] font-bold text-emerald-900 block mb-2">
+            Academic Spectrum
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-emerald-950 tracking-tight leading-tight">
+            Curriculum Structures & Qualifications
+          </h2>
+          <p class="text-stone-600 text-sm sm:text-base mt-2">
+            Structured in compliance with the Higher Education Commission of Pakistan and Board of Intermediate & Secondary Education Lahore.
+          </p>
+        </div>
+
+        <!-- Split Grid (Left: Intermediate / Right: BS 4-Year) -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+          
+          <!-- Column 1: Intermediate Programs (2 Years) -->
+          <div class="bg-white rounded-2xl border border-stone-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-xl transition-all duration-300">
+            <div>
+              <div class="h-56 relative overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1000&q=80" 
+                  alt="Intermediate Studies Textbooks and Desk" 
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                >
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-stone-950/30 to-transparent"></div>
+                <div class="absolute bottom-4 left-6 right-6 text-white">
+                  <span class="px-2.5 py-0.5 rounded-full bg-white/20 backdrop-blur-md text-[10px] font-bold uppercase tracking-widest text-amber-200 border border-white/20">
+                    Higher Secondary • 2 Years
+                  </span>
+                  <h3 class="text-2xl font-bold mt-1">Intermediate Certifications</h3>
+                </div>
+              </div>
+
+              <div class="p-6 sm:p-8 space-y-6">
+                <p class="text-xs text-stone-500 leading-relaxed">
+                  Conducted under the direct regulation of <strong>BISE Lahore</strong>, providing prerequisite scientific and analytical foundations for entrance into professional universities.
+                </p>
+
+                <!-- Intermediate Streams List -->
+                <div class="space-y-3.5">
+                  <div class="p-3.5 rounded-xl bg-stone-50 border border-stone-200 flex items-start gap-3">
+                    <span class="w-6 h-6 rounded-lg bg-emerald-100 text-emerald-900 font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">1</span>
+                    <div>
+                      <h4 class="text-sm font-bold text-emerald-950">FSc Pre-Medical</h4>
+                      <p class="text-xs text-stone-500 mt-0.5">Core subjects: Physics, Chemistry, Biology, English & Urdu.</p>
+                    </div>
+                  </div>
+
+                  <div class="p-3.5 rounded-xl bg-stone-50 border border-stone-200 flex items-start gap-3">
+                    <span class="w-6 h-6 rounded-lg bg-emerald-100 text-emerald-900 font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">2</span>
+                    <div>
+                      <h4 class="text-sm font-bold text-emerald-950">FSc Pre-Engineering</h4>
+                      <p class="text-xs text-stone-500 mt-0.5">Core subjects: Physics, Chemistry, Advanced Mathematics.</p>
+                    </div>
+                  </div>
+
+                  <div class="p-3.5 rounded-xl bg-stone-50 border border-stone-200 flex items-start gap-3">
+                    <span class="w-6 h-6 rounded-lg bg-emerald-100 text-emerald-900 font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">3</span>
+                    <div>
+                      <h4 class="text-sm font-bold text-emerald-950">ICS (Computer Science)</h4>
+                      <p class="text-xs text-stone-500 mt-0.5">Programming, Relational Database Systems, Mathematics, Statistics.</p>
+                    </div>
+                  </div>
+
+                  <div class="p-3.5 rounded-xl bg-stone-50 border border-stone-200 flex items-start gap-3">
+                    <span class="w-6 h-6 rounded-lg bg-emerald-100 text-emerald-900 font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">4</span>
+                    <div>
+                      <h4 class="text-sm font-bold text-emerald-950">ICom & FA Humanities</h4>
+                      <p class="text-xs text-stone-500 mt-0.5">Financial Accounting, Economics, Civics, Islamic History & Literature.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="px-6 sm:px-8 py-4 bg-stone-50/80 border-t border-stone-200 flex items-center justify-between text-xs text-stone-500">
+              <span>Assessment: Annual Examination</span>
+              <a href="admissions.html" class="font-bold text-emerald-950 hover:underline">Admission Criteria &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Column 2: BS 4-Year Degree Programs (8 Semesters) -->
+          <div class="bg-white rounded-2xl border border-stone-200 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-xl transition-all duration-300">
+            <div>
+              <div class="h-56 relative overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1000&q=80" 
+                  alt="BS Degree Graduation" 
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                >
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-stone-950/30 to-transparent"></div>
+                <div class="absolute bottom-4 left-6 right-6 text-white">
+                  <span class="px-2.5 py-0.5 rounded-full bg-emerald-900/90 backdrop-blur-md text-[10px] font-bold uppercase tracking-widest text-emerald-100 border border-emerald-700/50">
+                    Undergraduate • 4 Years (8 Semesters)
+                  </span>
+                  <h3 class="text-2xl font-bold mt-1">BS 4-Year Honors Degrees</h3>
+                </div>
+              </div>
+
+              <div class="p-6 sm:p-8 space-y-6">
+                <p class="text-xs text-stone-500 leading-relaxed">
+                  Accredited by the <strong>Higher Education Commission (HEC)</strong> and affiliated with the <strong>University of the Punjab, Lahore</strong> under standard semester system regulations.
+                </p>
+
+                <!-- BS Degree Programs List -->
+                <div class="space-y-3.5">
+                  <div class="p-3.5 rounded-xl bg-amber-50/50 border border-stone-200 flex items-start gap-3">
+                    <span class="w-6 h-6 rounded-lg bg-emerald-900 text-white font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">BS</span>
+                    <div>
+                      <h4 class="text-sm font-bold text-emerald-950">BS Computer Science (BS CS)</h4>
+                      <p class="text-xs text-stone-500 mt-0.5">Software Engineering, Artificial Intelligence, Algorithms & Data Structures.</p>
+                    </div>
+                  </div>
+
+                  <div class="p-3.5 rounded-xl bg-amber-50/50 border border-stone-200 flex items-start gap-3">
+                    <span class="w-6 h-6 rounded-lg bg-emerald-900 text-white font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">BS</span>
+                    <div>
+                      <h4 class="text-sm font-bold text-emerald-950">BS Physics & Chemistry</h4>
+                      <p class="text-xs text-stone-500 mt-0.5">Quantum Mechanics, Thermodynamics, Organic Chemistry & Laboratory Research.</p>
+                    </div>
+                  </div>
+
+                  <div class="p-3.5 rounded-xl bg-amber-50/50 border border-stone-200 flex items-start gap-3">
+                    <span class="w-6 h-6 rounded-lg bg-emerald-900 text-white font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">BS</span>
+                    <div>
+                      <h4 class="text-sm font-bold text-emerald-950">BS Mathematics</h4>
+                      <p class="text-xs text-stone-500 mt-0.5">Calculus, Linear Algebra, Mathematical Statistics & Pure Number Theory.</p>
+                    </div>
+                  </div>
+
+                  <div class="p-3.5 rounded-xl bg-amber-50/50 border border-stone-200 flex items-start gap-3">
+                    <span class="w-6 h-6 rounded-lg bg-emerald-900 text-white font-bold text-xs flex items-center justify-center flex-shrink-0 mt-0.5">BS</span>
+                    <div>
+                      <h4 class="text-sm font-bold text-emerald-950">BS English (Literature & Linguistics)</h4>
+                      <p class="text-xs text-stone-500 mt-0.5">Literary Criticism, Sociolinguistics, Classical Prose & Modern English Poetry.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="px-6 sm:px-8 py-4 bg-stone-50/80 border-t border-stone-200 flex items-center justify-between text-xs text-stone-500">
+              <span>Assessment: Semester GPA System</span>
+              <a href="admissions.html" class="font-bold text-emerald-950 hover:underline">Apply for BS Program &rarr;</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 4. FACULTIES & DEPARTMENTS (CSS Grid with Real Unsplash Field Images)      -->
+    <!-- ========================================================================= -->
+    <section class="py-20 lg:py-28 bg-stone-50/70 border-b border-stone-200/80">
+      <div class="max-w-7xl mx-auto px-6 sm:px-8">
+        
+        <div class="max-w-3xl mb-12">
+          <span class="text-xs uppercase tracking-[0.25em] font-bold text-emerald-900 block mb-2">
+            Academic Organization
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-emerald-950 tracking-tight leading-tight">
+            Faculties & Academic Departments
+          </h2>
+          <p class="text-stone-600 text-sm sm:text-base mt-2">
+            Our teaching faculty comprises dedicated professors and lecturers holding advanced degrees across physical sciences, computing, and social disciplines.
+          </p>
+        </div>
+
+        <!-- 4 Major Faculties Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <!-- Faculty 1: Natural Sciences -->
+          <div class="bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-sm group hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="h-44 overflow-hidden relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=800&q=80" 
+                  alt="Faculty of Natural Sciences Lab Equipment" 
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                >
+                <div class="absolute inset-0 bg-stone-950/20"></div>
+              </div>
+              <div class="p-6">
+                <span class="text-[10px] uppercase tracking-widest font-bold text-emerald-900 block mb-1">Sciences</span>
+                <h3 class="text-lg font-bold text-emerald-950 mb-2">Faculty of Natural Sciences</h3>
+                <p class="text-xs text-stone-600 leading-relaxed mb-4">
+                  Dedicated to inquiry in the fundamental physical world through rigorous empirical research and modern practical experimentation.
+                </p>
+                <div class="pt-3 border-t border-stone-100 text-xs text-stone-500 space-y-1">
+                  <p>• Department of Physics</p>
+                  <p>• Department of Chemistry</p>
+                  <p>• Department of Botany & Zoology</p>
+                  <p>• Department of Mathematics</p>
+                </div>
+              </div>
+            </div>
+            <div class="px-6 py-3 bg-stone-50 border-t border-stone-100 text-[11px] font-semibold text-emerald-950">
+              5 Specialized Research Labs
+            </div>
+          </div>
+
+          <!-- Faculty 2: Computer Science & IT -->
+          <div class="bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-sm group hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="h-44 overflow-hidden relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80" 
+                  alt="Faculty of Computer Science Computing Workstations" 
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                >
+                <div class="absolute inset-0 bg-stone-950/20"></div>
+              </div>
+              <div class="p-6">
+                <span class="text-[10px] uppercase tracking-widest font-bold text-emerald-900 block mb-1">Computing</span>
+                <h3 class="text-lg font-bold text-emerald-950 mb-2">Faculty of Computer Science</h3>
+                <p class="text-xs text-stone-600 leading-relaxed mb-4">
+                  Empowering students with contemporary computational skills, algorithmic development, and modern programming languages.
+                </p>
+                <div class="pt-3 border-t border-stone-100 text-xs text-stone-500 space-y-1">
+                  <p>• Software Engineering Lab</p>
+                  <p>• Database Systems Wing</p>
+                  <p>• Networking & Cyber Foundations</p>
+                  <p>• Data Analytics Lab</p>
+                </div>
+              </div>
+            </div>
+            <div class="px-6 py-3 bg-stone-50 border-t border-stone-100 text-[11px] font-semibold text-emerald-950">
+              High-Speed Fiber Network
+            </div>
+          </div>
+
+          <!-- Faculty 3: Humanities & Social Sciences -->
+          <div class="bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-sm group hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="h-44 overflow-hidden relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&w=800&q=80" 
+                  alt="Faculty of Humanities Literature Books" 
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                >
+                <div class="absolute inset-0 bg-stone-950/20"></div>
+              </div>
+              <div class="p-6">
+                <span class="text-[10px] uppercase tracking-widest font-bold text-emerald-900 block mb-1">Humanities</span>
+                <h3 class="text-lg font-bold text-emerald-950 mb-2">Faculty of Humanities</h3>
+                <p class="text-xs text-stone-600 leading-relaxed mb-4">
+                  Fostering critical discourse, eloquence, historical consciousness, and deep linguistic mastery across local and world cultures.
+                </p>
+                <div class="pt-3 border-t border-stone-100 text-xs text-stone-500 space-y-1">
+                  <p>• Department of English</p>
+                  <p>• Department of Urdu Literature</p>
+                  <p>• Department of Islamic Studies</p>
+                  <p>• Department of Political Science</p>
+                </div>
+              </div>
+            </div>
+            <div class="px-6 py-3 bg-stone-50 border-t border-stone-100 text-[11px] font-semibold text-emerald-950">
+              Literary & Debating Society
+            </div>
+          </div>
+
+          <!-- Faculty 4: Commerce & Business Studies -->
+          <div class="bg-white rounded-2xl overflow-hidden border border-stone-200 shadow-sm group hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="h-44 overflow-hidden relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" 
+                  alt="Faculty of Commerce Business Charts" 
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                >
+                <div class="absolute inset-0 bg-stone-950/20"></div>
+              </div>
+              <div class="p-6">
+                <span class="text-[10px] uppercase tracking-widest font-bold text-emerald-900 block mb-1">Commerce</span>
+                <h3 class="text-lg font-bold text-emerald-950 mb-2">Faculty of Commerce</h3>
+                <p class="text-xs text-stone-600 leading-relaxed mb-4">
+                  Equipping graduates with practical knowledge in financial management, corporate accounting, commercial law, and trade ethics.
+                </p>
+                <div class="pt-3 border-t border-stone-100 text-xs text-stone-500 space-y-1">
+                  <p>• Financial Accounting</p>
+                  <p>• Banking & Currency</p>
+                  <p>• Commercial Geography</p>
+                  <p>• Micro & Macro Economics</p>
+                </div>
+              </div>
+            </div>
+            <div class="px-6 py-3 bg-stone-50 border-t border-stone-100 text-[11px] font-semibold text-emerald-950">
+              Professional Career Track
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 5. ACADEMIC CALENDAR & EXAMINATION REGULATIONS                            -->
+    <!-- ========================================================================= -->
+    <section class="py-20 bg-[#FDFBF7] border-b border-stone-200/80">
+      <div class="max-w-7xl mx-auto px-6 sm:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+          
+          <!-- Left: Regulations & Policies -->
+          <div class="lg:col-span-5 space-y-4">
+            <span class="text-xs uppercase tracking-[0.25em] font-bold text-emerald-900 block">
+              Governance & Policies
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-emerald-950 tracking-tight leading-tight">
+              Academic Regulations & Student Conduct
+            </h2>
+            <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+              Govt. Graduate College Pattoki maintains strict academic discipline in accordance with Higher Education Department Punjab guidelines and University of the Punjab statutes.
+            </p>
+            <ul class="space-y-2 text-xs text-stone-600 pt-2">
+              <li class="flex items-center gap-2">
+                <span class="text-emerald-900 font-bold">•</span>
+                <span>Minimum <strong>75% mandatory attendance</strong> required in all lectures and laboratory sessions.</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-emerald-900 font-bold">•</span>
+                <span>Semester GPA grading scale follows standardized PU examination thresholds.</span>
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-emerald-900 font-bold">•</span>
+                <span>Merit scholarship opportunities available for top percentile students each term.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Right: Key Academic Dates Table -->
+          <div class="lg:col-span-7 bg-white rounded-2xl border border-stone-200 p-6 sm:p-8 shadow-sm">
+            <h3 class="text-base font-bold text-emerald-950 mb-4 pb-2 border-b border-stone-200">
+              Academic Calendar 2025–26 (Tentative Schedule)
+            </h3>
+            
+            <div class="overflow-x-auto">
+              <table class="w-full text-left text-xs text-stone-600">
+                <thead>
+                  <tr class="border-b border-stone-200 text-emerald-950 font-bold uppercase tracking-wider text-[10px]">
+                    <th class="py-3 px-2">Academic Event</th>
+                    <th class="py-3 px-2">Intermediate Schedule</th>
+                    <th class="py-3 px-2">BS 4-Year Schedule</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-stone-100">
+                  <tr>
+                    <td class="py-3 px-2 font-semibold text-stone-800">Fall Term Admissions</td>
+                    <td class="py-3 px-2">August – September</td>
+                    <td class="py-3 px-2">September – October</td>
+                  </tr>
+                  <tr>
+                    <td class="py-3 px-2 font-semibold text-stone-800">Commencement of Classes</td>
+                    <td class="py-3 px-2">September 15</td>
+                    <td class="py-3 px-2">October 20</td>
+                  </tr>
+                  <tr>
+                    <td class="py-3 px-2 font-semibold text-stone-800">Mid-Term Assessments</td>
+                    <td class="py-3 px-2">December Terminals</td>
+                    <td class="py-3 px-2">8th Week of Semester</td>
+                  </tr>
+                  <tr>
+                    <td class="py-3 px-2 font-semibold text-stone-800">Final Examinations</td>
+                    <td class="py-3 px-2">BISE Annual (May)</td>
+                    <td class="py-3 px-2">PU Semester Finals (Feb/July)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p class="text-[11px] text-stone-400 mt-4 italic">
+              *Dates are subject to official notifications issued by the Higher Education Department Punjab.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- 6. REFINED WARM BEIGE FOOTER (Exact Match to index.html & about.html)     -->
+  <!-- ========================================================================= -->
+  <footer class="bg-[#F5F2EB] text-stone-700 pt-16 pb-12 border-t border-stone-300">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-stone-300/80">
+        
+        <!-- Column 1: Institutional Crest & Identity -->
+        <div class="space-y-3">
+          <img 
+            src="./logo.png" 
+            alt="Govt. Graduate College Pattoki" 
+            class="h-10 w-auto object-contain"
+            onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 48 48\' fill=\'%23064E3B\'><circle cx=\'24\' cy=\'24\' r=\'22\' fill=\'%23064E3B\'/><path d=\'M24 12L36 18L24 24L12 18L24 12Z\' fill=\'%23FFFFFF\'/><path d=\'M16 22V28C16 32.4 19.6 36 24 36C28.4 36 32 32.4 32 28V22L24 26L16 22Z\' fill=\'%23FFFFFF\'/></svg>';"
+          >
+          <p class="text-xs text-stone-600 leading-relaxed">
+            Govt. Graduate College Pattoki (Kasur District, Punjab). Committed to academic integrity, scientific inquiry, and regional leadership since 1970.
+          </p>
+        </div>
+
+        <!-- Column 2: Navigation Links -->
+        <div>
+          <h4 class="text-xs uppercase tracking-widest font-bold text-emerald-950 mb-3">Site Pages</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-emerald-950 transition-colors">Home Page</a></li>
+            <li><a href="about.html" class="hover:text-emerald-950 transition-colors">About the College</a></li>
+            <li><a href="academics.html" class="hover:text-emerald-950 transition-colors font-bold text-emerald-950">Academic Programs</a></li>
+            <li><a href="admissions.html" class="hover:text-emerald-950 transition-colors">Admissions & Merit</a></li>
+            <li><a href="sports.html" class="hover:text-emerald-950 transition-colors">Sports & Athletics</a></li>
+            <li><a href="contact.html" class="hover:text-emerald-950 transition-colors">Contact Administration</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Contact Details -->
+        <div>
+          <h4 class="text-xs uppercase tracking-widest font-bold text-emerald-950 mb-3">Campus Office</h4>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            College Road, Pattoki,<br>
+            District Kasur, Punjab, Pakistan.<br>
+            <span class="block mt-2">Telephone: <a href="tel:+92494421234" class="text-emerald-950 font-semibold">+92 (49) 442-1234</a></span>
+            <span>Email: <a href="mailto:info@ggcpattoki.edu.pk" class="text-emerald-950 font-semibold">info@ggcpattoki.edu.pk</a></span>
+          </p>
+        </div>
+
+        <!-- Column 4: Affiliation & Governance -->
+        <div>
+          <h4 class="text-xs uppercase tracking-widest font-bold text-emerald-950 mb-3">Governance</h4>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            Higher Education Department, Government of the Punjab.<br>
+            Affiliated with <strong>University of the Punjab, Lahore</strong>.<br>
+            Board of Intermediate & Secondary Education Lahore.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Bottom Sub-Footer -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-500 gap-4">
+        <p>&copy; 2025 Govt. Graduate College Pattoki. All rights reserved.</p>
+        <p class="font-mono text-[11px] uppercase text-emerald-950 font-bold">Autonomous Public Sector Higher Education Institution</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- JAVASCRIPT: MOBILE NAVIGATION DRAWER TOGGLE                               -->
+  <!-- ========================================================================= -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggleBtn = document.getElementById('mobile-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const hamburgerIcon = document.getElementById('hamburger-icon');
+      const closeIcon = document.getElementById('close-icon');
+
+      if (toggleBtn && mobileMenu) {
+        toggleBtn.addEventListener('click', () => {
+          const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+          toggleBtn.setAttribute('aria-expanded', String(!isExpanded));
+          mobileMenu.classList.toggle('hidden');
+          hamburgerIcon.classList.toggle('hidden');
+          closeIcon.classList.toggle('hidden');
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

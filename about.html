@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth bg-[#FDFBF7]">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Govt. Graduate College Pattoki — Institutional history, leadership, vision, and campus facilities since 1970.">
+  <title>About Us — Govt. Graduate College Pattoki</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans strictly (Single Global Font, No Serifs) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Custom Theme Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            academic: {
+              cream: '#FDFBF7',
+              beige: '#F5F2EB',
+              sand: '#EBE6DC',
+              green: '#064E3B',       // Deep Institutional Green
+              darkgreen: '#022C22',   // Deep Forest Green
+              charcoal: '#292524',    // Deep Stone Charcoal
+              muted: '#78716C',       // Muted Stone Gray
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Warm Academic Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FDFBF7;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #D6D3D1;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #064E3B;
+    }
+  </style>
+</head>
+
+<body class="bg-[#FDFBF7] text-stone-800 font-sans antialiased min-h-screen flex flex-col selection:bg-emerald-900 selection:text-white">
+
+  <!-- ========================================================================= -->
+  <!-- 1. SLIM FULL-WIDTH NAVBAR (Exact Match to index.html, 'About' Active)     -->
+  <!-- ========================================================================= -->
+  <header class="w-full fixed top-0 bg-white/95 backdrop-blur-md border-b border-stone-200 z-50 px-6 py-3 transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+
+      <!-- Left Side Links: Home, About (Active), Academics -->
+      <nav aria-label="Primary Left Navigation" class="hidden md:flex items-center space-x-6 lg:space-x-8 flex-1 justify-end pr-6 lg:pr-8">
+        <a href="index.html" class="text-xs uppercase tracking-widest font-semibold text-stone-600 hover:text-emerald-950 transition-colors">
+          Home
+        </a>
+        <a href="about.html" class="text-xs uppercase tracking-widest font-bold text-emerald-950 border-b-2 border-emerald-950 pb-0.5 transition-colors">
+          About
+        </a>
+        <a href="academics.html" class="text-xs uppercase tracking-widest font-semibold text-stone-600 hover:text-emerald-950 transition-colors">
+          Academics
+        </a>
+      </nav>
+
+      <!-- Center Logo Strictly (src="./logo.png", class "h-10 w-auto object-contain", NO text) -->
+      <a href="index.html" class="flex-shrink-0 mx-auto md:mx-0 flex items-center justify-center focus:outline-none" aria-label="Govt. Graduate College Pattoki Home">
+        <img 
+          src="./logo.png" 
+          alt="Govt. Graduate College Pattoki" 
+          class="h-10 w-auto object-contain"
+          onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 48 48\' fill=\'%23064E3B\'><circle cx=\'24\' cy=\'24\' r=\'22\' fill=\'%23064E3B\'/><path d=\'M24 12L36 18L24 24L12 18L24 12Z\' fill=\'%23FFFFFF\'/><path d=\'M16 22V28C16 32.4 19.6 36 24 36C28.4 36 32 32.4 32 28V22L24 26L16 22Z\' fill=\'%23FFFFFF\'/></svg>';"
+        >
+      </a>
+
+      <!-- Right Side Links: Admissions, Sports, Contact -->
+      <nav aria-label="Primary Right Navigation" class="hidden md:flex items-center space-x-6 lg:space-x-8 flex-1 justify-start pl-6 lg:pl-8">
+        <a href="admissions.html" class="text-xs uppercase tracking-widest font-semibold text-stone-600 hover:text-emerald-950 transition-colors">
+          Admissions
+        </a>
+        <a href="sports.html" class="text-xs uppercase tracking-widest font-semibold text-stone-600 hover:text-emerald-950 transition-colors">
+          Sports
+        </a>
+        <a href="contact.html" class="text-xs uppercase tracking-widest font-semibold text-stone-600 hover:text-emerald-950 transition-colors">
+          Contact
+        </a>
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="flex items-center md:hidden">
+        <button id="mobile-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation menu" class="p-1.5 text-stone-700 hover:text-emerald-950 focus:outline-none">
+          <svg id="hamburger-icon" class="w-6 h-6 block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-stone-200 px-6 py-4 mt-3">
+      <nav class="flex flex-col space-y-3 text-center">
+        <a href="index.html" class="text-xs uppercase tracking-widest font-semibold text-stone-600 hover:text-emerald-950 py-1.5 border-b border-stone-100">Home</a>
+        <a href="about.html" class="text-xs uppercase tracking-widest font-bold text-emerald-950 py-1.5 border-b border-stone-100">About</a>
+        <a href="academics.html" class="text-xs uppercase tracking-widest font-semibold text-stone-600 hover:text-emerald-950 py-1.5 border-b border-stone-100">Academics</a>
+        <a href="admissions.html" class="text-xs uppercase tracking-widest font-semibold text-stone-600 hover:text-emerald-950 py-1.5 border-b border-stone-100">Admissions</a>
+        <a href="sports.html" class="text-xs uppercase tracking-widest font-semibold text-stone-600 hover:text-emerald-950 py-1.5 border-b border-stone-100">Sports</a>
+        <a href="contact.html" class="text-xs uppercase tracking-widest font-semibold text-stone-600 hover:text-emerald-950 py-1.5">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- 2. HERO BANNER (Short, Wide Collegiate Campus Header - Dark Overlay)       -->
+  <!-- ========================================================================= -->
+  <main class="flex-grow pt-[57px]">
+    <section class="relative h-[44vh] min-h-[320px] max-h-[420px] w-full flex items-center justify-center text-center overflow-hidden border-b border-stone-800 bg-stone-900">
+      
+      <!-- Wide Campus Background Image -->
+      <img 
+        src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=2000&q=85" 
+        alt="Govt. Graduate College Pattoki Historic Campus" 
+        class="absolute inset-0 w-full h-full object-cover object-center"
+        loading="eager"
+      >
+
+      <!-- Strong Dark Overlay per Mandate 2 -->
+      <div class="absolute inset-0 bg-slate-900/70 backdrop-blur-[1px]"></div>
+
+      <!-- Banner Content -->
+      <div class="relative z-10 max-w-4xl mx-auto px-6 py-8">
+        <!-- Breadcrumb Navigation -->
+        <nav aria-label="Breadcrumb" class="mb-3 flex items-center justify-center space-x-2 text-xs uppercase tracking-widest text-stone-300">
+          <a href="index.html" class="hover:text-white transition-colors">Home</a>
+          <span class="text-stone-400">/</span>
+          <span class="text-emerald-400 font-bold">About</span>
+        </nav>
+
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight uppercase leading-tight drop-shadow-sm">
+          About Our College
+        </h1>
+        <p class="text-sm sm:text-base text-stone-200 font-normal max-w-xl mx-auto mt-2 drop-shadow">
+          A five-decade journey of academic discipline, moral development, and regional service since 1970.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 3. HISTORY & HERITAGE (2-Column Layout with Asymmetric Image Grid)         -->
+    <!-- ========================================================================= -->
+    <section class="py-20 lg:py-28 bg-[#FDFBF7] border-b border-stone-200/80">
+      <div class="max-w-7xl mx-auto px-6 sm:px-8">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          <!-- Left Column: History, Vision & Strategic Objectives -->
+          <div class="lg:col-span-6 space-y-6">
+            <span class="text-xs uppercase tracking-[0.25em] font-bold text-emerald-900 block">
+              Our Heritage & Vision
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-emerald-950 tracking-tight leading-tight">
+              More than Fifty Years of Transformative Education
+            </h2>
+            <div class="space-y-4 text-stone-600 text-sm sm:text-base leading-relaxed">
+              <p>
+                Founded in <strong>1970</strong>, Govt. Graduate College Pattoki was established to democratize access to higher education for students throughout District Kasur. From its modest initial intake, the institution has flourished into a leading public sector graduate college occupying a sprawling 25-acre campus.
+              </p>
+              <p>
+                Operating under the jurisdiction of the Higher Education Department, Government of the Punjab, and affiliated with the <strong>University of the Punjab, Lahore</strong>, the college balances scientific exploration with humanist reflection, preparing graduates for competitive national careers and advanced scholarship.
+              </p>
+            </div>
+
+            <!-- Core Institutional Values (Clean Grid with Checkmarks) -->
+            <div class="pt-4 border-t border-stone-200 grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs">
+              <div class="flex items-center gap-2.5 p-2 rounded-lg bg-stone-50 border border-stone-200">
+                <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-900 flex items-center justify-center font-bold text-[11px]">✓</span>
+                <span class="font-bold text-emerald-950">Academic Integrity & Merit</span>
+              </div>
+              <div class="flex items-center gap-2.5 p-2 rounded-lg bg-stone-50 border border-stone-200">
+                <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-900 flex items-center justify-center font-bold text-[11px]">✓</span>
+                <span class="font-bold text-emerald-950">HEC-Aligned Curricula</span>
+              </div>
+              <div class="flex items-center gap-2.5 p-2 rounded-lg bg-stone-50 border border-stone-200">
+                <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-900 flex items-center justify-center font-bold text-[11px]">✓</span>
+                <span class="font-bold text-emerald-950">Character & Moral Leadership</span>
+              </div>
+              <div class="flex items-center gap-2.5 p-2 rounded-lg bg-stone-50 border border-stone-200">
+                <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-900 flex items-center justify-center font-bold text-[11px]">✓</span>
+                <span class="font-bold text-emerald-950">Equitable Public Access</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Asymmetric Image Grid (Real Unsplash Academic Visuals) -->
+          <div class="lg:col-span-6 grid grid-cols-2 gap-4">
+            
+            <div class="space-y-4">
+              <div class="rounded-2xl overflow-hidden border border-stone-200 shadow-sm">
+                <img 
+                  src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" 
+                  alt="Students discussing academic work at Govt. Graduate College Pattoki" 
+                  class="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                >
+              </div>
+              <div class="p-4 rounded-xl bg-amber-50/70 border border-stone-200 text-center">
+                <p class="text-2xl font-black text-emerald-950">54+</p>
+                <p class="text-[11px] uppercase tracking-wider text-stone-600 font-semibold mt-0.5">Years of Legacy</p>
+              </div>
+            </div>
+
+            <div class="space-y-4 pt-8 sm:pt-12">
+              <div class="p-4 rounded-xl bg-white border border-stone-200 text-center shadow-xs">
+                <p class="text-2xl font-black text-emerald-950">25 Acres</p>
+                <p class="text-[11px] uppercase tracking-wider text-stone-600 font-semibold mt-0.5">Campus Grounds</p>
+              </div>
+              <div class="rounded-2xl overflow-hidden border border-stone-200 shadow-sm">
+                <img 
+                  src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=800&q=80" 
+                  alt="Classical research volumes and books" 
+                  class="w-full h-64 object-cover hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                >
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 4. PRINCIPAL'S MESSAGE (Executive Portrait, Quote & Sign-Off)             -->
+    <!-- ========================================================================= -->
+    <section class="py-20 lg:py-24 bg-[#F5F2EB] border-b border-stone-300/80">
+      <div class="max-w-7xl mx-auto px-6 sm:px-8">
+        
+        <div class="bg-white rounded-2xl border border-stone-200 p-8 sm:p-12 lg:p-16 shadow-sm">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            
+            <!-- Left: Professional Dignified Portrait -->
+            <div class="lg:col-span-4 flex flex-col items-center text-center">
+              <div class="w-48 h-56 sm:w-56 sm:h-64 rounded-2xl overflow-hidden border-2 border-stone-200 shadow-md">
+                <img 
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80" 
+                  alt="Principal Prof. Dr. Muhammad Tariq" 
+                  class="w-full h-full object-cover object-top"
+                  loading="lazy"
+                >
+              </div>
+              <h3 class="text-base font-bold text-emerald-950 mt-4">
+                Prof. Dr. Muhammad Tariq
+              </h3>
+              <p class="text-xs text-stone-500 font-medium">
+                Principal, Govt. Graduate College Pattoki
+              </p>
+              <span class="inline-block mt-2 px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-900 text-[10px] font-bold uppercase tracking-wider border border-emerald-200">
+                Ph.D. Education
+              </span>
+            </div>
+
+            <!-- Right: Quote Block & Message -->
+            <div class="lg:col-span-8 space-y-5">
+              <span class="text-xs uppercase tracking-[0.25em] font-bold text-emerald-900 block">
+                Leadership Perspective
+              </span>
+              <h2 class="text-2xl sm:text-3xl font-extrabold text-emerald-950 tracking-tight leading-tight">
+                "Education is not merely the acquisition of facts, but the disciplined training of the mind to think critically."
+              </h2>
+              <div class="space-y-4 text-stone-600 text-sm sm:text-base leading-relaxed">
+                <p>
+                  Welcome to Govt. Graduate College Pattoki. As the head of this esteemed seat of higher learning, it is my privilege to lead a dedicated faculty devoted to cultivating academic diligence, intellectual boldness, and civic virtue in our youth.
+                </p>
+                <p>
+                  Our institution continuously aligns itself with contemporary academic standards, expanding laboratory infrastructure, upgrading digital learning hubs, and ensuring our BS and Intermediate students graduate with real-world competence. We welcome prospective scholars to join our purposeful campus community.
+                </p>
+              </div>
+              <div class="pt-4 border-t border-stone-200 flex items-center justify-between">
+                <div>
+                  <p class="text-xs font-mono font-bold text-emerald-950 uppercase">Office of the Principal</p>
+                  <p class="text-[11px] text-stone-500">Govt. Graduate College Pattoki, Punjab</p>
+                </div>
+                <span class="text-xs font-mono text-stone-400">admin@ggcpattoki.edu.pk</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 5. INFRASTRUCTURE & FACILITIES (Image-Heavy Bento Grid)                   -->
+    <!-- ========================================================================= -->
+    <section class="py-20 lg:py-28 bg-[#FDFBF7] border-b border-stone-200/80">
+      <div class="max-w-7xl mx-auto px-6 sm:px-8">
+        
+        <div class="max-w-3xl mb-12">
+          <span class="text-xs uppercase tracking-[0.25em] font-bold text-emerald-900 block mb-2">
+            Campus Architecture & Facilities
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-emerald-950 tracking-tight leading-tight mb-3">
+            World-Class Amenities for Academic & Physical Growth
+          </h2>
+          <p class="text-stone-600 text-sm sm:text-base">
+            Spread over 25 lush acres, our campus provides specialized scientific labs, expansive library halls, and athletic facilities designed to nurture all aspects of collegiate life.
+          </p>
+        </div>
+
+        <!-- Bento Grid: 4 cols, 2 rows -->
+        <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-6 h-auto md:h-[640px]">
+          
+          <!-- Bento Box 1 (Span 2 cols, 2 rows): Central Library -->
+          <div class="md:col-span-2 md:row-span-2 group rounded-2xl overflow-hidden border border-stone-200 bg-white shadow-sm hover:shadow-xl transition-all duration-500 relative flex flex-col justify-end">
+            <img 
+              src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&w=1200&q=80" 
+              alt="Central Library of Govt. Graduate College Pattoki" 
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              loading="lazy"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/35 to-transparent"></div>
+            
+            <div class="relative z-10 p-8 text-white">
+              <span class="inline-block px-3 py-1 rounded-full bg-white/20 backdrop-blur-md text-[10px] font-bold uppercase tracking-widest text-amber-200 mb-3 border border-white/20">
+                Academic Library
+              </span>
+              <h3 class="text-2xl font-bold tracking-tight mb-2">Central Collegiate Library</h3>
+              <p class="text-xs sm:text-sm text-stone-200 leading-relaxed max-w-md">
+                Over 25,000 academic titles, rare archival manuscripts, leading international research journals, and air-conditioned reading halls.
+              </p>
+            </div>
+          </div>
+
+          <!-- Bento Box 2 (Span 1 col, 1 row): Science Laboratories -->
+          <div class="md:col-span-1 md:row-span-1 group rounded-2xl overflow-hidden border border-stone-200 bg-white shadow-sm hover:shadow-xl transition-all duration-500 relative flex flex-col justify-end">
+            <img 
+              src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80" 
+              alt="Modern Science Research Laboratory" 
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              loading="lazy"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/30 to-transparent"></div>
+            
+            <div class="relative z-10 p-5 text-white">
+              <span class="text-[9px] uppercase tracking-widest font-bold text-amber-200 block mb-1">Scientific Inquiry</span>
+              <h4 class="text-base font-bold leading-tight">Science Laboratories</h4>
+              <p class="text-[11px] text-stone-300 mt-1">Physics, Chemistry & Biology research suites.</p>
+            </div>
+          </div>
+
+          <!-- Bento Box 3 (Span 1 col, 1 row): IT & Computing Labs -->
+          <div class="md:col-span-1 md:row-span-1 group rounded-2xl overflow-hidden border border-stone-200 bg-white shadow-sm hover:shadow-xl transition-all duration-500 relative flex flex-col justify-end">
+            <img 
+              src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80" 
+              alt="IT Center and Computer Laboratory" 
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              loading="lazy"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/30 to-transparent"></div>
+            
+            <div class="relative z-10 p-5 text-white">
+              <span class="text-[9px] uppercase tracking-widest font-bold text-amber-200 block mb-1">Technology</span>
+              <h4 class="text-base font-bold leading-tight">IT & Computing Hub</h4>
+              <p class="text-[11px] text-stone-300 mt-1">High-speed networked labs supporting ICS & BS.</p>
+            </div>
+          </div>
+
+          <!-- Bento Box 4 (Span 2 cols, 1 row): Sports & Botanical Grounds -->
+          <div class="md:col-span-2 md:row-span-1 group rounded-2xl overflow-hidden border border-stone-200 bg-white shadow-sm hover:shadow-xl transition-all duration-500 relative flex flex-col justify-end">
+            <img 
+              src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1200&q=80" 
+              alt="Collegiate Sports and Athletic Grounds" 
+              class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              loading="lazy"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/30 to-transparent"></div>
+            
+            <div class="relative z-10 p-6 text-white flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+              <div>
+                <span class="inline-block px-2.5 py-0.5 rounded-full bg-white/20 backdrop-blur-md text-[10px] font-bold uppercase tracking-widest text-amber-200 mb-2 border border-white/20">
+                  Athletics
+                </span>
+                <h4 class="text-lg font-bold leading-tight">Sports & Athletic Grounds</h4>
+                <p class="text-xs text-stone-200 mt-1 max-w-sm">
+                  Dedicated cricket pavilion, football pitch, athletics track, and volleyball courts.
+                </p>
+              </div>
+              <a href="contact.html" class="inline-flex items-center text-xs font-semibold text-amber-200 hover:text-white transition-colors flex-shrink-0">
+                Plan Campus Visit &rarr;
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- 6. REFINED WARM BEIGE FOOTER (Exact Match to index.html)                  -->
+  <!-- ========================================================================= -->
+  <footer class="bg-[#F5F2EB] text-stone-700 pt-16 pb-12 border-t border-stone-300">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-stone-300/80">
+        
+        <!-- Column 1: Institutional Crest & Identity -->
+        <div class="space-y-3">
+          <img 
+            src="./logo.png" 
+            alt="Govt. Graduate College Pattoki" 
+            class="h-10 w-auto object-contain"
+            onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 48 48\' fill=\'%23064E3B\'><circle cx=\'24\' cy=\'24\' r=\'22\' fill=\'%23064E3B\'/><path d=\'M24 12L36 18L24 24L12 18L24 12Z\' fill=\'%23FFFFFF\'/><path d=\'M16 22V28C16 32.4 19.6 36 24 36C28.4 36 32 32.4 32 28V22L24 26L16 22Z\' fill=\'%23FFFFFF\'/></svg>';"
+          >
+          <p class="text-xs text-stone-600 leading-relaxed">
+            Govt. Graduate College Pattoki (Kasur District, Punjab). Committed to academic integrity, scientific inquiry, and regional leadership since 1970.
+          </p>
+        </div>
+
+        <!-- Column 2: Navigation Links -->
+        <div>
+          <h4 class="text-xs uppercase tracking-widest font-bold text-emerald-950 mb-3">Site Pages</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-emerald-950 transition-colors">Home Page</a></li>
+            <li><a href="about.html" class="hover:text-emerald-950 transition-colors font-bold text-emerald-950">About the College</a></li>
+            <li><a href="academics.html" class="hover:text-emerald-950 transition-colors">Academic Programs</a></li>
+            <li><a href="admissions.html" class="hover:text-emerald-950 transition-colors">Admissions & Merit</a></li>
+            <li><a href="sports.html" class="hover:text-emerald-950 transition-colors">Sports & Athletics</a></li>
+            <li><a href="contact.html" class="hover:text-emerald-950 transition-colors">Contact Administration</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Contact Details -->
+        <div>
+          <h4 class="text-xs uppercase tracking-widest font-bold text-emerald-950 mb-3">Campus Office</h4>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            College Road, Pattoki,<br>
+            District Kasur, Punjab, Pakistan.<br>
+            <span class="block mt-2">Telephone: <a href="tel:+92494421234" class="text-emerald-950 font-semibold">+92 (49) 442-1234</a></span>
+            <span>Email: <a href="mailto:info@ggcpattoki.edu.pk" class="text-emerald-950 font-semibold">info@ggcpattoki.edu.pk</a></span>
+          </p>
+        </div>
+
+        <!-- Column 4: Affiliation & Governance -->
+        <div>
+          <h4 class="text-xs uppercase tracking-widest font-bold text-emerald-950 mb-3">Governance</h4>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            Higher Education Department, Government of the Punjab.<br>
+            Affiliated with <strong>University of the Punjab, Lahore</strong>.<br>
+            Board of Intermediate & Secondary Education Lahore.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Bottom Sub-Footer -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-500 gap-4">
+        <p>&copy; 2025 Govt. Graduate College Pattoki. All rights reserved.</p>
+        <p class="font-mono text-[11px] uppercase text-emerald-950 font-bold">Autonomous Public Sector Higher Education Institution</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- JAVASCRIPT: MOBILE NAVIGATION DRAWER TOGGLE                               -->
+  <!-- ========================================================================= -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggleBtn = document.getElementById('mobile-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const hamburgerIcon = document.getElementById('hamburger-icon');
+      const closeIcon = document.getElementById('close-icon');
+
+      if (toggleBtn && mobileMenu) {
+        toggleBtn.addEventListener('click', () => {
+          const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+          toggleBtn.setAttribute('aria-expanded', String(!isExpanded));
+          mobileMenu.classList.toggle('hidden');
+          hamburgerIcon.classList.toggle('hidden');
+          closeIcon.classList.toggle('hidden');
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

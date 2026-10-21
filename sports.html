@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth bg-stone-50">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sports & Athletics at Govt. Graduate College Pattoki — Cricket ground, football stadium, indoor sports complex, Annual Sports Gala, and trophy cabinet.">
+  <title>Sports & Athletics — Govt. Graduate College Pattoki</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans strictly (Single Global Font, No Serifs) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Custom Theme Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            academic: {
+              cream: '#FDFBF7',
+              beige: '#F5F2EB',
+              sand: '#EBE6DC',
+              green: '#064E3B',
+              darkgreen: '#022C22',
+              charcoal: '#292524',
+              muted: '#78716C',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Warm Academic Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FDFBF7;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #D6D3D1;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #064E3B;
+    }
+  </style>
+</head>
+
+<body class="bg-stone-50 text-stone-800 font-sans antialiased min-h-screen flex flex-col selection:bg-emerald-900 selection:text-white">
+
+  <!-- ========================================================================= -->
+  <!-- 1. SLIM FULL-WIDTH NAVBAR (Left: 3 Links | Logo | Right: 3 Links)         -->
+  <!-- ========================================================================= -->
+  <header class="w-full fixed top-0 bg-white/95 backdrop-blur-md border-b border-stone-200 z-50 px-6 py-3 transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+
+      <!-- Left Side Links: Home, About, Academics -->
+      <nav aria-label="Primary Left Navigation" class="hidden md:flex items-center space-x-6 lg:space-x-8 flex-1 justify-end pr-6 lg:pr-8">
+        <a href="index.html" class="text-xs uppercase tracking-widest font-semibold text-stone-600 hover:text-emerald-950 transition-colors">
+          Home
+        </a>
+        <a href="about.html" class="text-xs uppercase tracking-widest font-semibold text-stone-600 hover:text-emerald-950 transition-colors">
+          About
+        </a>
+        <a href="academics.html" class="text-xs uppercase tracking-widest font-semibold text-stone-600 hover:text-emerald-950 transition-colors">
+          Academics
+        </a>
+      </nav>
+
+      <!-- Center Logo Strictly (src="./logo.png", class "h-10 w-auto object-contain", NO text) -->
+      <a href="index.html" class="flex-shrink-0 mx-auto md:mx-0 flex items-center justify-center focus:outline-none" aria-label="Govt. Graduate College Pattoki Home">
+        <img 
+          src="./logo.png" 
+          alt="Govt. Graduate College Pattoki" 
+          class="h-10 w-auto object-contain"
+          onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 48 48\' fill=\'%23064E3B\'><circle cx=\'24\' cy=\'24\' r=\'22\' fill=\'%23064E3B\'/><path d=\'M24 12L36 18L24 24L12 18L24 12Z\' fill=\'%23FFFFFF\'/><path d=\'M16 22V28C16 32.4 19.6 36 24 36C28.4 36 32 32.4 32 28V22L24 26L16 22Z\' fill=\'%23FFFFFF\'/></svg>';"
+        >
+      </a>
+
+      <!-- Right Side Links: Admissions, Sports (Active), Contact -->
+      <nav aria-label="Primary Right Navigation" class="hidden md:flex items-center space-x-6 lg:space-x-8 flex-1 justify-start pl-6 lg:pl-8">
+        <a href="admissions.html" class="text-xs uppercase tracking-widest font-semibold text-stone-600 hover:text-emerald-950 transition-colors">
+          Admissions
+        </a>
+        <a href="sports.html" class="text-xs uppercase tracking-widest font-bold text-emerald-950 border-b-2 border-emerald-950 pb-0.5 transition-colors">
+          Sports
+        </a>
+        <a href="contact.html" class="text-xs uppercase tracking-widest font-semibold text-stone-600 hover:text-emerald-950 transition-colors">
+          Contact
+        </a>
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="md:hidden flex items-center">
+        <button 
+          id="mobile-toggle"
+          type="button" 
+          class="text-stone-700 hover:text-emerald-950 focus:outline-none focus:ring-2 focus:ring-emerald-900 rounded p-1"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Toggle navigation menu"
+        >
+          <svg id="hamburger-icon" class="w-6 h-6 block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-stone-200 mt-3 pt-3 pb-2 space-y-2 bg-white">
+      <a href="index.html" class="block px-3 py-2 text-xs uppercase tracking-widest font-semibold text-stone-600 hover:bg-stone-50 hover:text-emerald-950 rounded">
+        Home
+      </a>
+      <a href="about.html" class="block px-3 py-2 text-xs uppercase tracking-widest font-semibold text-stone-600 hover:bg-stone-50 hover:text-emerald-950 rounded">
+        About
+      </a>
+      <a href="academics.html" class="block px-3 py-2 text-xs uppercase tracking-widest font-semibold text-stone-600 hover:bg-stone-50 hover:text-emerald-950 rounded">
+        Academics
+      </a>
+      <a href="admissions.html" class="block px-3 py-2 text-xs uppercase tracking-widest font-semibold text-stone-600 hover:bg-stone-50 hover:text-emerald-950 rounded">
+        Admissions
+      </a>
+      <a href="sports.html" class="block px-3 py-2 text-xs uppercase tracking-widest font-bold text-emerald-950 bg-stone-100 rounded">
+        Sports
+      </a>
+      <a href="contact.html" class="block px-3 py-2 text-xs uppercase tracking-widest font-semibold text-stone-600 hover:bg-stone-50 hover:text-emerald-950 rounded">
+        Contact
+      </a>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- MAIN CONTENT CONTAINER                                                    -->
+  <!-- ========================================================================= -->
+  <main class="flex-grow pt-16">
+
+    <!-- ========================================================================= -->
+    <!-- 2. HIGH-CONTRAST SPORTS HERO BANNER (Dark Overlay + Stark White Text)     -->
+    <!-- ========================================================================= -->
+    <section class="relative h-[46vh] min-h-[340px] max-h-[460px] w-full flex items-center justify-center overflow-hidden border-b border-stone-800 bg-stone-900">
+      <!-- High-Quality Unsplash Background: Collegiate Athletics Track & Stadium -->
+      <img 
+        src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=2000&q=80" 
+        alt="Collegiate Athletics Stadium and Running Track" 
+        class="absolute inset-0 w-full h-full object-cover object-center"
+        loading="eager"
+      >
+      <!-- Strong DARK Overlay per Critical Mandate (bg-slate-900/65) -->
+      <div class="absolute inset-0 bg-slate-950/65 backdrop-blur-[1px]"></div>
+
+      <div class="relative z-10 max-w-4xl mx-auto text-center px-6 pt-6">
+        <!-- Breadcrumb Navigation -->
+        <nav aria-label="Breadcrumb" class="mb-3 flex items-center justify-center space-x-2 text-xs uppercase tracking-widest text-stone-300">
+          <a href="index.html" class="hover:text-white transition-colors">Home</a>
+          <span class="text-stone-400">/</span>
+          <span class="text-emerald-400 font-bold">Sports</span>
+        </nav>
+
+        <!-- Stark White Heading -->
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-tight drop-shadow-sm">
+          Sports & Athletics
+        </h1>
+        <p class="mt-3 text-sm sm:text-base text-stone-200 max-w-2xl mx-auto leading-relaxed">
+          Cultivating discipline, resilience, and collegiate sportsmanship. Home to championship cricket, football, and inter-collegiate athletic traditions since 1970.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 3. ATHLETIC METRICS & STATS BAR                                           -->
+    <!-- ========================================================================= -->
+    <section class="bg-white border-b border-stone-200 py-6 px-6 sm:px-8">
+      <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        
+        <div class="border-r border-stone-200 last:border-r-0 px-4">
+          <div class="text-2xl sm:text-3xl font-black text-emerald-950">12 Acres</div>
+          <p class="text-xs uppercase tracking-wider text-stone-500 mt-1 font-semibold">Dedicated Sports Grounds</p>
+        </div>
+
+        <div class="border-r border-stone-200 last:border-r-0 px-4">
+          <div class="text-2xl sm:text-3xl font-black text-emerald-950">8 Fields</div>
+          <p class="text-xs uppercase tracking-wider text-stone-500 mt-1 font-semibold">Competitive Disciplines</p>
+        </div>
+
+        <div class="border-r border-stone-200 last:border-r-0 px-4">
+          <div class="text-2xl sm:text-3xl font-black text-emerald-950">25+ Titles</div>
+          <p class="text-xs uppercase tracking-wider text-stone-500 mt-1 font-semibold">Board & Regional Trophies</p>
+        </div>
+
+        <div class="px-4">
+          <div class="text-2xl sm:text-3xl font-black text-emerald-950">2% Quota</div>
+          <p class="text-xs uppercase tracking-wider text-stone-500 mt-1 font-semibold">Sports Merit Admissions</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 4. FACILITIES GRID (3-Column Card Layout)                                  -->
+    <!-- ========================================================================= -->
+    <section class="py-16 px-6 sm:px-8 border-b border-stone-200 bg-stone-50">
+      <div class="max-w-7xl mx-auto">
+        
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <p class="text-xs uppercase tracking-widest font-bold text-emerald-900 mb-2">Campus Infrastructure</p>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">Our Sports Facilities</h2>
+          <p class="mt-2 text-xs sm:text-sm text-stone-600 leading-relaxed">
+            Maintained under the Directorate of Physical Education to support regular physical training, departmental leagues, and provincial tournaments.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Facility Card 1: Cricket Ground -->
+          <div class="bg-white rounded-2xl border border-stone-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+            <div>
+              <div class="h-56 w-full overflow-hidden relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1531415074868-036b1c57e329?auto=format&fit=crop&w=800&q=80" 
+                  alt="Collegiate Cricket Pitch and Natural Turf Oval" 
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                >
+                <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded text-[10px] font-bold uppercase tracking-wider text-emerald-950">
+                  Natural Turf Oval
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-lg font-bold text-stone-900 group-hover:text-emerald-950 transition-colors">
+                  Cricket Pavilion & Oval
+                </h3>
+                <p class="text-xs text-stone-600 mt-2 leading-relaxed">
+                  A manicured 65-meter boundary cricket oval equipped with prepared turf pitches, concrete practice nets, sightscreens, and a shaded spectator pavilion. Hosts annual BISE Lahore inter-collegiate qualifying fixtures.
+                </p>
+                <ul class="mt-4 pt-4 border-t border-stone-100 space-y-1.5 text-xs text-stone-600">
+                  <li class="flex items-center">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-900 mr-2"></span>
+                    <span>3 Professional Turf Practice Nets</span>
+                  </li>
+                  <li class="flex items-center">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-900 mr-2"></span>
+                    <span>Covered Players Pavilion & Scorers Box</span>
+                  </li>
+                  <li class="flex items-center">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-900 mr-2"></span>
+                    <span>Automated Pitch Roller & Irrigation System</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-2">
+              <span class="text-[11px] font-semibold text-emerald-950">Open Daily: 6:00 AM – 9:00 AM & 3:00 PM – 6:30 PM</span>
+            </div>
+          </div>
+
+          <!-- Facility Card 2: Football Field & Athletics Track -->
+          <div class="bg-white rounded-2xl border border-stone-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+            <div>
+              <div class="h-56 w-full overflow-hidden relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=800&q=80" 
+                  alt="Regulation Grassy Football Field and Goalposts" 
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                >
+                <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded text-[10px] font-bold uppercase tracking-wider text-emerald-950">
+                  Standard 105m x 68m
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-lg font-bold text-stone-900 group-hover:text-emerald-950 transition-colors">
+                  Football Field & Athletics Track
+                </h3>
+                <p class="text-xs text-stone-600 mt-2 leading-relaxed">
+                  A full-sized regulation natural grass soccer pitch encircled by a standard 400-meter cinder athletic running track, dedicated shot-put circles, and long-jump landing sandpits.
+                </p>
+                <ul class="mt-4 pt-4 border-t border-stone-100 space-y-1.5 text-xs text-stone-600">
+                  <li class="flex items-center">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-900 mr-2"></span>
+                    <span>Standard 400m Track for 100m–1500m Sprints</span>
+                  </li>
+                  <li class="flex items-center">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-900 mr-2"></span>
+                    <span>High Jump, Long Jump & Triple Jump Pits</span>
+                  </li>
+                  <li class="flex items-center">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-900 mr-2"></span>
+                    <span>Regulation FIFA-dimension Goalposts</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-2">
+              <span class="text-[11px] font-semibold text-emerald-950">Host of District Kasur Football Tournaments</span>
+            </div>
+          </div>
+
+          <!-- Facility Card 3: Indoor Athletics Complex -->
+          <div class="bg-white rounded-2xl border border-stone-200 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col justify-between group">
+            <div>
+              <div class="h-56 w-full overflow-hidden relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=800&q=80" 
+                  alt="Indoor Gymnasium and Badminton Courts" 
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                >
+                <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2.5 py-1 rounded text-[10px] font-bold uppercase tracking-wider text-emerald-950">
+                  Indoor Arena
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-lg font-bold text-stone-900 group-hover:text-emerald-950 transition-colors">
+                  Indoor Gymnasium & Courts
+                </h3>
+                <p class="text-xs text-stone-600 mt-2 leading-relaxed">
+                  A multi-purpose covered sports hall hosting two wooden badminton courts, international-standard table tennis arenas, judo/taekwondo mats, and strength conditioning weight stations.
+                </p>
+                <ul class="mt-4 pt-4 border-t border-stone-100 space-y-1.5 text-xs text-stone-600">
+                  <li class="flex items-center">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-900 mr-2"></span>
+                    <span>2 Hardwood Badminton Courts</span>
+                  </li>
+                  <li class="flex items-center">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-900 mr-2"></span>
+                    <span>4 Double-Fish Official Table Tennis Tables</span>
+                  </li>
+                  <li class="flex items-center">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-900 mr-2"></span>
+                    <span>Strength & Conditioning Fitness Center</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="px-6 pb-6 pt-2">
+              <span class="text-[11px] font-semibold text-emerald-950">Climate-Controlled Indoor Playing Area</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 5. ANNUAL SPORTS GALA & EVENTS (Asymmetric Masonry Grid)                   -->
+    <!-- ========================================================================= -->
+    <section class="py-16 px-6 sm:px-8 border-b border-stone-200 bg-white">
+      <div class="max-w-7xl mx-auto">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+          <div>
+            <p class="text-xs uppercase tracking-widest font-bold text-emerald-900 mb-2">Campus Traditions</p>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">Annual Sports Gala & Tournaments</h2>
+          </div>
+          <p class="text-xs sm:text-sm text-stone-600 max-w-md leading-relaxed">
+            The defining athletic carnival of the academic calendar, uniting over 2,000 collegiate students across track sprint heats, football derbies, and tug-of-war spectacles.
+          </p>
+        </div>
+
+        <!-- Asymmetric Visual Masonry Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+          
+          <!-- Masonry Item 1: Large Featured Action (7 cols) -->
+          <div class="md:col-span-7 bg-stone-100 rounded-2xl overflow-hidden relative group min-h-[360px] border border-stone-200">
+            <img 
+              src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=1200&q=80" 
+              alt="Track Sprinters in Annual Gala 100m Dash" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 min-h-[360px]"
+              loading="lazy"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent flex flex-col justify-end p-6 sm:p-8 text-white">
+              <span class="text-[10px] uppercase font-bold tracking-widest text-emerald-400">Track & Field Heat</span>
+              <h3 class="text-xl sm:text-2xl font-bold mt-1 text-white">The Annual 100m & 400m Sprint Final</h3>
+              <p class="text-xs text-stone-200 mt-2 max-w-lg leading-relaxed">
+                Inter-departmental sprint derbies contested between the Faculties of Natural Sciences, Computer Science, and Humanities before a packed grandstand.
+              </p>
+            </div>
+          </div>
+
+          <!-- Masonry Item 2: Soccer Action (5 cols) -->
+          <div class="md:col-span-5 bg-stone-100 rounded-2xl overflow-hidden relative group min-h-[360px] border border-stone-200">
+            <img 
+              src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=900&q=80" 
+              alt="Inter-Departmental Football Championship Match" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 min-h-[360px]"
+              loading="lazy"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent flex flex-col justify-end p-6 sm:p-8 text-white">
+              <span class="text-[10px] uppercase font-bold tracking-widest text-emerald-400">Inter-Faculty Trophy</span>
+              <h3 class="text-lg sm:text-xl font-bold mt-1 text-white">Principal's Football Challenge Cup</h3>
+              <p class="text-xs text-stone-200 mt-2 leading-relaxed">
+                A 16-team knockout tournament celebrating competitive team play and sportsmanship.
+              </p>
+            </div>
+          </div>
+
+          <!-- Masonry Item 3: Table Tennis & Indoor (4 cols) -->
+          <div class="md:col-span-4 bg-stone-100 rounded-2xl overflow-hidden relative group min-h-[280px] border border-stone-200">
+            <img 
+              src="https://images.unsplash.com/photo-1534158914592-062992fbe900?auto=format&fit=crop&w=700&q=80" 
+              alt="Table Tennis Tournament at Indoor Sports Hall" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 min-h-[280px]"
+              loading="lazy"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent flex flex-col justify-end p-6 text-white">
+              <span class="text-[10px] uppercase font-bold tracking-widest text-emerald-400">Indoor League</span>
+              <h3 class="text-base font-bold mt-1 text-white">Table Tennis & Badminton Opens</h3>
+              <p class="text-xs text-stone-200 mt-1">Single and doubles tournaments held each December.</p>
+            </div>
+          </div>
+
+          <!-- Masonry Item 4: Volleyball Action (4 cols) -->
+          <div class="md:col-span-4 bg-stone-100 rounded-2xl overflow-hidden relative group min-h-[280px] border border-stone-200">
+            <img 
+              src="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&w=700&q=80" 
+              alt="Volleyball Match at Central Athletic Grounds" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 min-h-[280px]"
+              loading="lazy"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent flex flex-col justify-end p-6 text-white">
+              <span class="text-[10px] uppercase font-bold tracking-widest text-emerald-400">Regional Classic</span>
+              <h3 class="text-base font-bold mt-1 text-white">Inter-Collegiate Volleyball Derby</h3>
+              <p class="text-xs text-stone-200 mt-1">Traditional outdoor volleyball draws fervent student crowds.</p>
+            </div>
+          </div>
+
+          <!-- Masonry Item 5: Award Ceremony & Champions (4 cols) -->
+          <div class="md:col-span-4 bg-stone-100 rounded-2xl overflow-hidden relative group min-h-[280px] border border-stone-200">
+            <img 
+              src="https://images.unsplash.com/photo-1526676037777-05a232554f77?auto=format&fit=crop&w=700&q=80" 
+              alt="Student Athletes Celebrating Trophy Presentation" 
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 min-h-[280px]"
+              loading="lazy"
+            >
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent flex flex-col justify-end p-6 text-white">
+              <span class="text-[10px] uppercase font-bold tracking-widest text-emerald-400">Awards Presentation</span>
+              <h3 class="text-base font-bold mt-1 text-white">Annual Medals & Blazer Honors</h3>
+              <p class="text-xs text-stone-200 mt-1">Gold, silver medals, and College Colors awarded by the Principal.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 6. TROPHY CABINET & REGIONAL ACHIEVEMENTS                                  -->
+    <!-- ========================================================================= -->
+    <section class="py-16 px-6 sm:px-8 border-b border-stone-200 bg-stone-50">
+      <div class="max-w-7xl mx-auto">
+        
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <p class="text-xs uppercase tracking-widest font-bold text-emerald-900 mb-2">Honors & Laurels</p>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">The Collegiate Trophy Cabinet</h2>
+          <p class="mt-2 text-xs sm:text-sm text-stone-600 leading-relaxed">
+            Govt. Graduate College Pattoki has consistently produced standout athletic performances across board-level and university-level competitions.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Trophy 1 -->
+          <div class="bg-white p-6 rounded-xl border border-stone-200 hover:border-emerald-800 transition-all flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-800 flex items-center justify-center mb-4">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L11 6.477V16h2a1 1 0 110 2H7a1 1 0 110-2h2V6.477L6.237 7.582l1.715 5.349a1 1 0 01-.285 1.05A3.989 3.989 0 015 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.788l1.599.799L9 4.323V3a1 1 0 011-1z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <span class="text-[10px] uppercase font-bold tracking-widest text-amber-900 bg-amber-50 px-2 py-0.5 rounded">Gold Medal</span>
+              <h3 class="text-base font-bold text-stone-900 mt-2">BISE Lahore Inter-Board Cricket Champions</h3>
+              <p class="text-xs text-stone-600 mt-2 leading-relaxed">
+                Victorious across 32 regional colleges in the Kasur-Lahore divisional cricket championship (2023–24 Session).
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-100 text-[11px] font-mono text-stone-500">
+              Session: 2023–24
+            </div>
+          </div>
+
+          <!-- Trophy 2 -->
+          <div class="bg-white p-6 rounded-xl border border-stone-200 hover:border-emerald-800 transition-all flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-stone-100 text-stone-700 flex items-center justify-center mb-4">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L11 6.477V16h2a1 1 0 110 2H7a1 1 0 110-2h2V6.477L6.237 7.582l1.715 5.349a1 1 0 01-.285 1.05A3.989 3.989 0 015 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.788l1.599.799L9 4.323V3a1 1 0 011-1z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <span class="text-[10px] uppercase font-bold tracking-widest text-stone-700 bg-stone-100 px-2 py-0.5 rounded">Silver Medal</span>
+              <h3 class="text-base font-bold text-stone-900 mt-2">Punjab Inter-Collegiate 400m Athletics</h3>
+              <p class="text-xs text-stone-600 mt-2 leading-relaxed">
+                Silver finish in the 400-meter sprint at the Punjab Higher Education Department Athletic Meet, Punjab Stadium Lahore.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-100 text-[11px] font-mono text-stone-500">
+              Session: 2024
+            </div>
+          </div>
+
+          <!-- Trophy 3 -->
+          <div class="bg-white p-6 rounded-xl border border-stone-200 hover:border-emerald-800 transition-all flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-800 flex items-center justify-center mb-4">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1.323l3.954 1.582 1.599-.8a1 1 0 01.894 1.79l-1.233.616 1.738 5.42a1 1 0 01-.285 1.05A3.989 3.989 0 0115 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.715-5.349L11 6.477V16h2a1 1 0 110 2H7a1 1 0 110-2h2V6.477L6.237 7.582l1.715 5.349a1 1 0 01-.285 1.05A3.989 3.989 0 015 15a3.989 3.989 0 01-2.667-1.019 1 1 0 01-.285-1.05l1.738-5.42-1.233-.617a1 1 0 01.894-1.788l1.599.799L9 4.323V3a1 1 0 011-1z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <span class="text-[10px] uppercase font-bold tracking-widest text-amber-900 bg-amber-50 px-2 py-0.5 rounded">Champions</span>
+              <h3 class="text-base font-bold text-stone-900 mt-2">District Kasur Football Trophy</h3>
+              <p class="text-xs text-stone-600 mt-2 leading-relaxed">
+                Back-to-back district football champions defeating Kasur City and Chunian teams in decisive clean-sheet finals.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-100 text-[11px] font-mono text-stone-500">
+              Session: 2022, 2024
+            </div>
+          </div>
+
+          <!-- Trophy 4 -->
+          <div class="bg-white p-6 rounded-xl border border-stone-200 hover:border-emerald-800 transition-all flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-900 flex items-center justify-center mb-4">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V4a2 2 0 00-2-2H6zm1 2a1 1 0 000 2h6a1 1 0 100-2H7zm6 7a1 1 0 011 1v3a1 1 0 11-2 0v-3a1 1 0 011-1zm-3 3a1 1 0 100 2h.01a1 1 0 100-2H10zm-4-1a1 1 0 011-1h.01a1 1 0 110 2H7a1 1 0 01-1-1zm0-4a1 1 0 011-1h.01a1 1 0 110 2H7a1 1 0 01-1-1zm3 0a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <span class="text-[10px] uppercase font-bold tracking-widest text-emerald-900 bg-emerald-50 px-2 py-0.5 rounded">14 Athletes</span>
+              <h3 class="text-base font-bold text-stone-900 mt-2">Provincial Squad Selections</h3>
+              <p class="text-xs text-stone-600 mt-2 leading-relaxed">
+                Fourteen student-athletes selected for Punjab University and BISE Lahore combined teams for national tournaments.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-100 text-[11px] font-mono text-stone-500">
+              Active Selections: 2024–25
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 7. SPORTS QUOTA TRIALS & ADMISSIONS CALLOUT                                -->
+    <!-- ========================================================================= -->
+    <section class="py-14 px-6 sm:px-8 bg-white border-b border-stone-200">
+      <div class="max-w-7xl mx-auto bg-[#F5F2EB] rounded-2xl p-8 sm:p-10 border border-stone-300/80 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div>
+          <span class="text-xs uppercase tracking-widest font-bold text-emerald-900">Admissions Under Sports Quota</span>
+          <h2 class="text-2xl font-extrabold text-stone-900 mt-1">Aspiring Athlete? Join Through Our 2% Sports Quota</h2>
+          <p class="text-xs sm:text-sm text-stone-600 mt-2 max-w-xl leading-relaxed">
+            Govt. Graduate College Pattoki allocates 2% of total seats in Intermediate and BS programs for certified board and district medalists. Physical trials are held annually before the College Sports Committee.
+          </p>
+        </div>
+        <div class="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-4 flex-shrink-0">
+          <a 
+            href="admissions.html#eligibility-criteria" 
+            class="px-5 py-2.5 bg-white hover:bg-stone-50 text-emerald-950 font-bold text-xs uppercase tracking-wider rounded border border-stone-300 shadow-sm transition-colors"
+          >
+            Review Quota Criteria &rarr;
+          </a>
+          <a 
+            href="contact.html" 
+            class="px-5 py-2.5 bg-emerald-900 hover:bg-emerald-950 text-white font-bold text-xs uppercase tracking-wider rounded transition-colors shadow-sm"
+          >
+            Contact Sports Director
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- 8. REFINED WARM BEIGE FOOTER (Site Pages includes Sports & Athletics)     -->
+  <!-- ========================================================================= -->
+  <footer class="bg-[#F5F2EB] text-stone-700 pt-16 pb-12 border-t border-stone-300">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-stone-300/80">
+        
+        <!-- Column 1: Institutional Crest & Identity -->
+        <div class="space-y-3">
+          <img 
+            src="./logo.png" 
+            alt="Govt. Graduate College Pattoki" 
+            class="h-10 w-auto object-contain"
+            onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 48 48\' fill=\'%23064E3B\'><circle cx=\'24\' cy=\'24\' r=\'22\' fill=\'%23064E3B\'/><path d=\'M24 12L36 18L24 24L12 18L24 12Z\' fill=\'%23FFFFFF\'/><path d=\'M16 22V28C16 32.4 19.6 36 24 36C28.4 36 32 32.4 32 28V22L24 26L16 22Z\' fill=\'%23FFFFFF\'/></svg>';"
+          >
+          <p class="text-xs text-stone-600 leading-relaxed">
+            Govt. Graduate College Pattoki (Kasur District, Punjab). Committed to academic integrity, scientific inquiry, and athletic excellence since 1970.
+          </p>
+        </div>
+
+        <!-- Column 2: Navigation Links -->
+        <div>
+          <h4 class="text-xs uppercase tracking-widest font-bold text-emerald-950 mb-3">Site Pages</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-emerald-950 transition-colors">Home Page</a></li>
+            <li><a href="about.html" class="hover:text-emerald-950 transition-colors">About the College</a></li>
+            <li><a href="academics.html" class="hover:text-emerald-950 transition-colors">Academic Programs</a></li>
+            <li><a href="admissions.html" class="hover:text-emerald-950 transition-colors">Admissions & Merit</a></li>
+            <li><a href="sports.html" class="hover:text-emerald-950 transition-colors font-bold text-emerald-950">Sports & Athletics</a></li>
+            <li><a href="contact.html" class="hover:text-emerald-950 transition-colors">Contact Administration</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Contact Details -->
+        <div>
+          <h4 class="text-xs uppercase tracking-widest font-bold text-emerald-950 mb-3">Campus Office</h4>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            College Road, Pattoki,<br>
+            District Kasur, Punjab, Pakistan.<br>
+            <span class="block mt-2">Telephone: <a href="tel:+92494421234" class="text-emerald-950 font-semibold">+92 (49) 442-1234</a></span>
+            <span>Email: <a href="mailto:info@ggcpattoki.edu.pk" class="text-emerald-950 font-semibold">info@ggcpattoki.edu.pk</a></span>
+          </p>
+        </div>
+
+        <!-- Column 4: Affiliation & Governance -->
+        <div>
+          <h4 class="text-xs uppercase tracking-widest font-bold text-emerald-950 mb-3">Governance</h4>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            Higher Education Department, Government of the Punjab.<br>
+            Affiliated with <strong>University of the Punjab, Lahore</strong>.<br>
+            Board of Intermediate & Secondary Education Lahore.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Bottom Sub-Footer -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-500 gap-4">
+        <p>&copy; 2025 Govt. Graduate College Pattoki. All rights reserved.</p>
+        <p class="font-mono text-[11px] uppercase text-emerald-950 font-bold">Autonomous Public Sector Higher Education Institution</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- JAVASCRIPT: MOBILE NAVIGATION DRAWER TOGGLE                               -->
+  <!-- ========================================================================= -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggleBtn = document.getElementById('mobile-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const hamburgerIcon = document.getElementById('hamburger-icon');
+      const closeIcon = document.getElementById('close-icon');
+
+      if (toggleBtn && mobileMenu) {
+        toggleBtn.addEventListener('click', () => {
+          const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+          toggleBtn.setAttribute('aria-expanded', String(!isExpanded));
+          mobileMenu.classList.toggle('hidden');
+          hamburgerIcon.classList.toggle('hidden');
+          closeIcon.classList.toggle('hidden');
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

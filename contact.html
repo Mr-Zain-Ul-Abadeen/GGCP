@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth bg-[#FDFBF7]">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Govt. Graduate College Pattoki — Campus directory, administration phone extensions, official emails, campus map, and online inquiry form.">
+  <title>Get in Touch — Govt. Graduate College Pattoki</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans strictly (Single Global Font, No Serifs) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Custom Theme Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            academic: {
+              cream: '#FDFBF7',
+              beige: '#F5F2EB',
+              sand: '#EBE6DC',
+              green: '#064E3B',
+              darkgreen: '#022C22',
+              charcoal: '#292524',
+              muted: '#78716C',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Warm Academic Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FDFBF7;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #D6D3D1;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #064E3B;
+    }
+  </style>
+</head>
+
+<body class="bg-[#FDFBF7] text-stone-800 font-sans antialiased min-h-screen flex flex-col selection:bg-emerald-900 selection:text-white">
+
+  <!-- ========================================================================= -->
+  <!-- 1. SLIM FULL-WIDTH NAVBAR (Exact Match, 'Contact' Active)                 -->
+  <!-- ========================================================================= -->
+  <header class="w-full fixed top-0 bg-white/95 backdrop-blur-md border-b border-stone-200 z-50 px-6 py-3 transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+
+      <!-- Left Side Links: Home, About, Academics -->
+      <nav aria-label="Primary Left Navigation" class="hidden md:flex items-center space-x-6 lg:space-x-8 flex-1 justify-end pr-6 lg:pr-8">
+        <a href="index.html" class="text-xs uppercase tracking-widest font-semibold text-stone-600 hover:text-emerald-950 transition-colors">
+          Home
+        </a>
+        <a href="about.html" class="text-xs uppercase tracking-widest font-semibold text-stone-600 hover:text-emerald-950 transition-colors">
+          About
+        </a>
+        <a href="academics.html" class="text-xs uppercase tracking-widest font-semibold text-stone-600 hover:text-emerald-950 transition-colors">
+          Academics
+        </a>
+      </nav>
+
+      <!-- Center Logo Strictly (src="./logo.png", class "h-10 w-auto object-contain", NO text) -->
+      <a href="index.html" class="flex-shrink-0 mx-auto md:mx-0 flex items-center justify-center focus:outline-none" aria-label="Govt. Graduate College Pattoki Home">
+        <img 
+          src="./logo.png" 
+          alt="Govt. Graduate College Pattoki" 
+          class="h-10 w-auto object-contain"
+          onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 48 48\' fill=\'%23064E3B\'><circle cx=\'24\' cy=\'24\' r=\'22\' fill=\'%23064E3B\'/><path d=\'M24 12L36 18L24 24L12 18L24 12Z\' fill=\'%23FFFFFF\'/><path d=\'M16 22V28C16 32.4 19.6 36 24 36C28.4 36 32 32.4 32 28V22L24 26L16 22Z\' fill=\'%23FFFFFF\'/></svg>';"
+        >
+      </a>
+
+      <!-- Right Side Links: Admissions, Sports, Contact (Active) -->
+      <nav aria-label="Primary Right Navigation" class="hidden md:flex items-center space-x-6 lg:space-x-8 flex-1 justify-start pl-6 lg:pl-8">
+        <a href="admissions.html" class="text-xs uppercase tracking-widest font-semibold text-stone-600 hover:text-emerald-950 transition-colors">
+          Admissions
+        </a>
+        <a href="sports.html" class="text-xs uppercase tracking-widest font-semibold text-stone-600 hover:text-emerald-950 transition-colors">
+          Sports
+        </a>
+        <a href="contact.html" class="text-xs uppercase tracking-widest font-bold text-emerald-950 border-b-2 border-emerald-950 pb-0.5 transition-colors">
+          Contact
+        </a>
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="md:hidden flex items-center">
+        <button 
+          id="mobile-toggle"
+          type="button" 
+          class="text-stone-700 hover:text-emerald-950 focus:outline-none focus:ring-2 focus:ring-emerald-900 rounded p-1"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Toggle navigation menu"
+        >
+          <svg id="hamburger-icon" class="w-6 h-6 block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-stone-200 mt-3 pt-3 pb-2 space-y-2 bg-white">
+      <a href="index.html" class="block px-3 py-2 text-xs uppercase tracking-widest font-semibold text-stone-600 hover:bg-stone-50 hover:text-emerald-950 rounded">
+        Home
+      </a>
+      <a href="about.html" class="block px-3 py-2 text-xs uppercase tracking-widest font-semibold text-stone-600 hover:bg-stone-50 hover:text-emerald-950 rounded">
+        About
+      </a>
+      <a href="academics.html" class="block px-3 py-2 text-xs uppercase tracking-widest font-semibold text-stone-600 hover:bg-stone-50 hover:text-emerald-950 rounded">
+        Academics
+      </a>
+      <a href="admissions.html" class="block px-3 py-2 text-xs uppercase tracking-widest font-semibold text-stone-600 hover:bg-stone-50 hover:text-emerald-950 rounded">
+        Admissions
+      </a>
+      <a href="sports.html" class="block px-3 py-2 text-xs uppercase tracking-widest font-semibold text-stone-600 hover:bg-stone-50 hover:text-emerald-950 rounded">
+        Sports
+      </a>
+      <a href="contact.html" class="block px-3 py-2 text-xs uppercase tracking-widest font-bold text-emerald-950 bg-stone-100 rounded">
+        Contact
+      </a>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- MAIN CONTENT CONTAINER                                                    -->
+  <!-- ========================================================================= -->
+  <main class="flex-grow pt-16">
+
+    <!-- ========================================================================= -->
+    <!-- 2. SHORT CONTACT HERO BANNER (High-Contrast Dark Overlay)                 -->
+    <!-- ========================================================================= -->
+    <section class="relative h-[44vh] min-h-[320px] max-h-[420px] w-full flex items-center justify-center overflow-hidden border-b border-stone-800 bg-stone-900">
+      <!-- High-Quality Unsplash Background: University administration pathway / colonial portico -->
+      <img 
+        src="https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=2000&q=80" 
+        alt="Collegiate Academic Administration Grounds and Architecture" 
+        class="absolute inset-0 w-full h-full object-cover object-center"
+        loading="eager"
+      >
+      <!-- Strong Dark Overlay per Mandate 2 -->
+      <div class="absolute inset-0 bg-slate-900/70 backdrop-blur-[1px]"></div>
+
+      <div class="relative z-10 max-w-4xl mx-auto text-center px-6 pt-6">
+        <!-- Breadcrumb Navigation -->
+        <nav aria-label="Breadcrumb" class="mb-3 flex items-center justify-center space-x-2 text-xs uppercase tracking-widest text-stone-300">
+          <a href="index.html" class="hover:text-white transition-colors">Home</a>
+          <span class="text-stone-400">/</span>
+          <span class="text-emerald-400 font-bold">Contact</span>
+        </nav>
+
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-tight drop-shadow-sm">
+          Get in Touch
+        </h1>
+        <p class="mt-3 text-sm sm:text-base text-stone-200 max-w-2xl mx-auto leading-relaxed">
+          We welcome prospective students, parents, alumni, and research partners. Connect directly with our collegiate administration, admissions cell, or academic faculties.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 3. CONTACT INFORMATION CARDS GRID (Light Cream & Minimal SVGs)            -->
+    <!-- ========================================================================= -->
+    <section class="py-14 px-6 sm:px-8 border-b border-stone-200 bg-white">
+      <div class="max-w-7xl mx-auto">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Card 1: Campus Postal Address -->
+          <div class="bg-[#FDFBF7] p-6 rounded-xl border border-stone-200 hover:border-emerald-800 transition-all flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-900 flex items-center justify-center mb-4">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+              </div>
+              <span class="text-[10px] uppercase font-bold tracking-widest text-emerald-900">Campus Location</span>
+              <h3 class="text-base font-bold text-stone-900 mt-1">Official Address</h3>
+              <p class="text-xs text-stone-600 mt-2 leading-relaxed">
+                Govt. Graduate College Pattoki,<br>
+                College Road, Pattoki,<br>
+                District Kasur, Punjab, Pakistan.<br>
+                <span class="font-mono text-stone-500 mt-1 block">Postal Code: 55300</span>
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-200/60">
+              <a href="#campus-map" class="text-xs font-semibold text-emerald-900 hover:underline inline-flex items-center">
+                <span>View Campus Map</span>
+                <svg class="w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 2: Telephone Numbers -->
+          <div class="bg-[#FDFBF7] p-6 rounded-xl border border-stone-200 hover:border-emerald-800 transition-all flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-900 flex items-center justify-center mb-4">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                </svg>
+              </div>
+              <span class="text-[10px] uppercase font-bold tracking-widest text-emerald-900">Telephone Lines</span>
+              <h3 class="text-base font-bold text-stone-900 mt-1">Direct Helplines</h3>
+              <div class="text-xs text-stone-600 mt-2 space-y-1.5 leading-relaxed">
+                <div>
+                  <span class="font-semibold text-stone-700 block">General Exchange:</span>
+                  <a href="tel:+92494421234" class="text-emerald-950 font-bold hover:underline">+92 (49) 442-1234</a>
+                </div>
+                <div>
+                  <span class="font-semibold text-stone-700 block">Admissions Directorate:</span>
+                  <a href="tel:+92494425678" class="text-emerald-950 font-bold hover:underline">+92 (49) 442-5678</a>
+                </div>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-200/60 text-[11px] text-stone-500">
+              Monday through Saturday, 8:30 AM – 2:00 PM
+            </div>
+          </div>
+
+          <!-- Card 3: Electronic Mail -->
+          <div class="bg-[#FDFBF7] p-6 rounded-xl border border-stone-200 hover:border-emerald-800 transition-all flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-900 flex items-center justify-center mb-4">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <span class="text-[10px] uppercase font-bold tracking-widest text-emerald-900">Official Correspondence</span>
+              <h3 class="text-base font-bold text-stone-900 mt-1">Email Directory</h3>
+              <div class="text-xs text-stone-600 mt-2 space-y-1.5 leading-relaxed">
+                <div>
+                  <span class="font-semibold text-stone-700 block">General Information:</span>
+                  <a href="mailto:info@ggcpattoki.edu.pk" class="text-emerald-950 font-bold hover:underline break-all">info@ggcpattoki.edu.pk</a>
+                </div>
+                <div>
+                  <span class="font-semibold text-stone-700 block">Admissions & Verification:</span>
+                  <a href="mailto:admissions@ggcpattoki.edu.pk" class="text-emerald-950 font-bold hover:underline break-all">admissions@ggcpattoki.edu.pk</a>
+                </div>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-200/60 text-[11px] text-stone-500">
+              Inquiries addressed within 2 business days.
+            </div>
+          </div>
+
+          <!-- Card 4: Operating Hours -->
+          <div class="bg-[#FDFBF7] p-6 rounded-xl border border-stone-200 hover:border-emerald-800 transition-all flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-900 flex items-center justify-center mb-4">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <span class="text-[10px] uppercase font-bold tracking-widest text-emerald-900">Administration Schedule</span>
+              <h3 class="text-base font-bold text-stone-900 mt-1">Visiting Hours</h3>
+              <div class="text-xs text-stone-600 mt-2 space-y-1 leading-relaxed">
+                <div class="flex justify-between">
+                  <span class="font-semibold text-stone-700">Mon – Thu:</span>
+                  <span>8:30 AM – 2:00 PM</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="font-semibold text-stone-700">Friday:</span>
+                  <span>8:30 AM – 12:30 PM</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="font-semibold text-stone-700">Saturday:</span>
+                  <span>8:30 AM – 1:30 PM</span>
+                </div>
+                <div class="flex justify-between text-stone-400">
+                  <span>Sunday:</span>
+                  <span>Closed</span>
+                </div>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-200/60 text-[11px] text-stone-500">
+              National and provincial public holidays observed.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 4. SPLIT 2-COLUMN SECTION: INQUIRY FORM & EXTENSIONS DIRECTORY            -->
+    <!-- ========================================================================= -->
+    <section class="py-16 px-6 sm:px-8 border-b border-stone-200 bg-[#FDFBF7]">
+      <div class="max-w-7xl mx-auto">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+          
+          <!-- Column A: Inquiry Form UI (7 cols) -->
+          <div class="lg:col-span-7 bg-white p-8 sm:p-10 rounded-2xl border border-stone-200 shadow-sm">
+            <div>
+              <span class="text-xs uppercase tracking-widest font-bold text-emerald-900">Online Correspondence</span>
+              <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight mt-1">Send an Inquiry</h2>
+              <p class="text-xs sm:text-sm text-stone-600 mt-2 leading-relaxed">
+                Submit your query regarding programs, document verification, fee structures, or campus administration. Our administrative desk will respond to your provided email address.
+              </p>
+            </div>
+
+            <!-- Simulated Form Success Banner (Initially Hidden) -->
+            <div id="form-success-alert" class="hidden mt-6 p-4 bg-emerald-50 border border-emerald-300 rounded-lg text-emerald-950 text-xs">
+              <div class="flex items-start space-x-3">
+                <svg class="w-5 h-5 text-emerald-700 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <div>
+                  <h4 class="font-bold text-emerald-900">Inquiry Dispatched Successfully</h4>
+                  <p class="mt-1 leading-relaxed">
+                    Thank you for contacting Govt. Graduate College Pattoki. Your message has been logged under dispatch reference <strong>#GGC-2025-INQ</strong>. An official response will follow shortly.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Form -->
+            <form id="contact-form" class="mt-8 space-y-5" novalidate>
+              
+              <!-- Row 1: Name & Email -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="contact-name" class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-2">
+                    Full Name <span class="text-rose-600">*</span>
+                  </label>
+                  <input 
+                    type="text" 
+                    id="contact-name" 
+                    name="name" 
+                    required 
+                    placeholder="e.g. Muhammad Ahmad"
+                    class="w-full px-4 py-2.5 rounded-lg border border-stone-300 bg-[#FDFBF7] text-stone-800 text-xs placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-emerald-900 focus:border-emerald-900 transition-colors"
+                  >
+                  <p class="hidden text-[11px] text-rose-600 mt-1 input-error">Please provide your full name.</p>
+                </div>
+
+                <div>
+                  <label for="contact-email" class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-2">
+                    Email Address <span class="text-rose-600">*</span>
+                  </label>
+                  <input 
+                    type="email" 
+                    id="contact-email" 
+                    name="email" 
+                    required 
+                    placeholder="e.g. applicant@example.com"
+                    class="w-full px-4 py-2.5 rounded-lg border border-stone-300 bg-[#FDFBF7] text-stone-800 text-xs placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-emerald-900 focus:border-emerald-900 transition-colors"
+                  >
+                  <p class="hidden text-[11px] text-rose-600 mt-1 input-error">Please provide a valid email address.</p>
+                </div>
+              </div>
+
+              <!-- Row 2: Phone & Category -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="contact-phone" class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-2">
+                    Phone / WhatsApp Number
+                  </label>
+                  <input 
+                    type="tel" 
+                    id="contact-phone" 
+                    name="phone" 
+                    placeholder="e.g. +92 300 1234567"
+                    class="w-full px-4 py-2.5 rounded-lg border border-stone-300 bg-[#FDFBF7] text-stone-800 text-xs placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-emerald-900 focus:border-emerald-900 transition-colors"
+                  >
+                </div>
+
+                <div>
+                  <label for="contact-category" class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-2">
+                    Inquiry Category <span class="text-rose-600">*</span>
+                  </label>
+                  <select 
+                    id="contact-category" 
+                    name="category" 
+                    required 
+                    class="w-full px-4 py-2.5 rounded-lg border border-stone-300 bg-[#FDFBF7] text-stone-800 text-xs focus:outline-none focus:ring-2 focus:ring-emerald-900 focus:border-emerald-900 transition-colors"
+                  >
+                    <option value="" disabled selected>Select an inquiry area...</option>
+                    <option value="admissions-bs">BS 4-Year Honors Admissions</option>
+                    <option value="admissions-inter">Intermediate (FSc/ICS/ICom) Admissions</option>
+                    <option value="verification">Result Verification & Migration NOC</option>
+                    <option value="scholarship">PEEF / Mora Scholarships</option>
+                    <option value="faculty">Academic Faculty & Research Inquiries</option>
+                    <option value="general">General Administrative Query</option>
+                  </select>
+                  <p class="hidden text-[11px] text-rose-600 mt-1 input-error">Please select a category.</p>
+                </div>
+              </div>
+
+              <!-- Row 3: Subject -->
+              <div>
+                <label for="contact-subject" class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-2">
+                  Subject <span class="text-rose-600">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="contact-subject" 
+                  name="subject" 
+                  required 
+                  placeholder="e.g. Inquiry regarding BS Computer Science 2nd Merit Cutoff"
+                  class="w-full px-4 py-2.5 rounded-lg border border-stone-300 bg-[#FDFBF7] text-stone-800 text-xs placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-emerald-900 focus:border-emerald-900 transition-colors"
+                >
+                <p class="hidden text-[11px] text-rose-600 mt-1 input-error">Please enter a subject line.</p>
+              </div>
+
+              <!-- Row 4: Message -->
+              <div>
+                <label for="contact-message" class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-2">
+                  Detailed Message <span class="text-rose-600">*</span>
+                </label>
+                <textarea 
+                  id="contact-message" 
+                  name="message" 
+                  rows="5" 
+                  required 
+                  placeholder="Please include full academic details, roll numbers, or specific questions so the relevant desk can assist you promptly..."
+                  class="w-full px-4 py-2.5 rounded-lg border border-stone-300 bg-[#FDFBF7] text-stone-800 text-xs placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-emerald-900 focus:border-emerald-900 transition-colors resize-y"
+                ></textarea>
+                <p class="hidden text-[11px] text-rose-600 mt-1 input-error">Please enter your message.</p>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="pt-2">
+                <button 
+                  type="submit" 
+                  id="submit-btn"
+                  class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3 bg-emerald-900 hover:bg-emerald-950 text-white font-bold text-xs uppercase tracking-widest rounded-lg transition-all shadow-sm hover:shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-900"
+                >
+                  <span id="btn-text">Submit Inquiry</span>
+                  <svg id="btn-icon" class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                  </svg>
+                </button>
+              </div>
+
+            </form>
+          </div>
+
+          <!-- Column B: Departmental Extension Directory & Visitor Protocols (5 cols) -->
+          <div class="lg:col-span-5 space-y-6">
+            
+            <!-- Directory Card -->
+            <div class="bg-white p-6 sm:p-8 rounded-2xl border border-stone-200 shadow-sm">
+              <span class="text-xs uppercase tracking-widest font-bold text-emerald-900">Campus Phone PBX</span>
+              <h3 class="text-xl font-extrabold text-stone-900 mt-1">Departmental Extensions</h3>
+              <p class="text-xs text-stone-600 mt-2 leading-relaxed">
+                Dial general campus exchange <strong>(049) 442-1234</strong> followed by the extension number:
+              </p>
+
+              <div class="mt-6 divide-y divide-stone-100 text-xs">
+                
+                <div class="py-2.5 flex items-center justify-between">
+                  <div>
+                    <span class="font-bold text-stone-900">Principal's Secretariat</span>
+                    <span class="block text-[11px] text-stone-500">Executive & Administration</span>
+                  </div>
+                  <span class="font-mono font-bold text-emerald-950 bg-stone-100 px-2.5 py-1 rounded">Ext. 101</span>
+                </div>
+
+                <div class="py-2.5 flex items-center justify-between">
+                  <div>
+                    <span class="font-bold text-stone-900">Vice Principal / Student Affairs</span>
+                    <span class="block text-[11px] text-stone-500">Discipline & Student Societies</span>
+                  </div>
+                  <span class="font-mono font-bold text-emerald-950 bg-stone-100 px-2.5 py-1 rounded">Ext. 102</span>
+                </div>
+
+                <div class="py-2.5 flex items-center justify-between">
+                  <div>
+                    <span class="font-bold text-stone-900">Academic Registrar & Admissions</span>
+                    <span class="block text-[11px] text-stone-500">OCAS & Enrollment Verification</span>
+                  </div>
+                  <span class="font-mono font-bold text-emerald-950 bg-stone-100 px-2.5 py-1 rounded">Ext. 104</span>
+                </div>
+
+                <div class="py-2.5 flex items-center justify-between">
+                  <div>
+                    <span class="font-bold text-stone-900">Controller of Examinations</span>
+                    <span class="block text-[11px] text-stone-500">BISE Lahore & PU Semester Cell</span>
+                  </div>
+                  <span class="font-mono font-bold text-emerald-950 bg-stone-100 px-2.5 py-1 rounded">Ext. 106</span>
+                </div>
+
+                <div class="py-2.5 flex items-center justify-between">
+                  <div>
+                    <span class="font-bold text-stone-900">Central Library & Reading Hall</span>
+                    <span class="block text-[11px] text-stone-500">Circulation & HEC Digital Library</span>
+                  </div>
+                  <span class="font-mono font-bold text-emerald-950 bg-stone-100 px-2.5 py-1 rounded">Ext. 108</span>
+                </div>
+
+                <div class="py-2.5 flex items-center justify-between">
+                  <div>
+                    <span class="font-bold text-stone-900">Directorate of Physical Education</span>
+                    <span class="block text-[11px] text-stone-500">Sports Quota & Inter-Collegiate Events</span>
+                  </div>
+                  <span class="font-mono font-bold text-emerald-950 bg-stone-100 px-2.5 py-1 rounded">Ext. 110</span>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Visitor Protocols Card -->
+            <div class="bg-[#F5F2EB] p-6 sm:p-8 rounded-2xl border border-stone-300/80">
+              <span class="text-xs uppercase tracking-widest font-bold text-emerald-900">Campus Security & Ethics</span>
+              <h3 class="text-base font-bold text-stone-900 mt-1">Visitor Protocol</h3>
+              <ul class="mt-3 space-y-2 text-xs text-stone-700 leading-relaxed">
+                <li class="flex items-start">
+                  <span class="text-emerald-900 mr-2 font-bold">&bull;</span>
+                  <span>All visitors must deposit original CNIC at the Main Gate Reception Post to receive a Visitor Pass.</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-emerald-900 mr-2 font-bold">&bull;</span>
+                  <span>Vehicular parking for external visitors is designated in the Outer Courtyard behind Gate 1.</span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-emerald-900 mr-2 font-bold">&bull;</span>
+                  <span>Photography inside laboratory and library corridors requires administrative clearance.</span>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 5. CAMPUS MAP & TRANSIT SECTION (Google Maps Embed)                       -->
+    <!-- ========================================================================= -->
+    <section class="py-16 px-6 sm:px-8 border-b border-stone-200 bg-white" id="campus-map">
+      <div class="max-w-7xl mx-auto">
+        
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <p class="text-xs uppercase tracking-widest font-bold text-emerald-900 mb-2">Geographical Orientation</p>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">Campus Location & Transit Directions</h2>
+          <p class="mt-2 text-xs sm:text-sm text-stone-600 leading-relaxed">
+            Conveniently situated along College Road, Pattoki. Accessible via National Highway (N-5) Multan Road and within walking distance from Pattoki Railway Station.
+          </p>
+        </div>
+
+        <!-- Google Maps Iframe Container -->
+        <div class="rounded-2xl border border-stone-300 shadow-sm overflow-hidden bg-stone-100">
+          <iframe 
+            title="Govt. Graduate College Pattoki Campus Map"
+            src="https://maps.google.com/maps?q=Pattoki,+Punjab,+Pakistan&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            class="w-full h-[400px] sm:h-[460px] border-0" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+
+        <!-- Transit Routes Overview -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+          
+          <div class="p-5 bg-[#FDFBF7] rounded-xl border border-stone-200 text-xs">
+            <h4 class="font-bold text-stone-900 mb-1">From N-5 National Highway</h4>
+            <p class="text-stone-600 leading-relaxed">
+              Take the central Pattoki city bypass exit onto College Road. The college grand gate is located 1.2 km south of the main crossing.
+            </p>
+          </div>
+
+          <div class="p-5 bg-[#FDFBF7] rounded-xl border border-stone-200 text-xs">
+            <h4 class="font-bold text-stone-900 mb-1">From Pattoki Railway Station</h4>
+            <p class="text-stone-600 leading-relaxed">
+              Approximately 8 minutes via local motorized or pedal rickshaws. Continuous transit is available along Station Road directly to the campus.
+            </p>
+          </div>
+
+          <div class="p-5 bg-[#FDFBF7] rounded-xl border border-stone-200 text-xs">
+            <h4 class="font-bold text-stone-900 mb-1">Subsidized Student Transit</h4>
+            <p class="text-stone-600 leading-relaxed">
+              Designated student shuttle vans connect Chunian, Habibabad, and surrounding union councils to the college gate during morning commute hours.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- 6. REFINED WARM BEIGE FOOTER (Exact Match to index, about, academics)     -->
+  <!-- ========================================================================= -->
+  <footer class="bg-[#F5F2EB] text-stone-700 pt-16 pb-12 border-t border-stone-300">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-stone-300/80">
+        
+        <!-- Column 1: Institutional Crest & Identity -->
+        <div class="space-y-3">
+          <img 
+            src="./logo.png" 
+            alt="Govt. Graduate College Pattoki" 
+            class="h-10 w-auto object-contain"
+            onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 48 48\' fill=\'%23064E3B\'><circle cx=\'24\' cy=\'24\' r=\'22\' fill=\'%23064E3B\'/><path d=\'M24 12L36 18L24 24L12 18L24 12Z\' fill=\'%23FFFFFF\'/><path d=\'M16 22V28C16 32.4 19.6 36 24 36C28.4 36 32 32.4 32 28V22L24 26L16 22Z\' fill=\'%23FFFFFF\'/></svg>';"
+          >
+          <p class="text-xs text-stone-600 leading-relaxed">
+            Govt. Graduate College Pattoki (Kasur District, Punjab). Committed to academic integrity, scientific inquiry, and regional leadership since 1970.
+          </p>
+        </div>
+
+        <!-- Column 2: Navigation Links -->
+        <div>
+          <h4 class="text-xs uppercase tracking-widest font-bold text-emerald-950 mb-3">Site Pages</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-emerald-950 transition-colors">Home Page</a></li>
+            <li><a href="about.html" class="hover:text-emerald-950 transition-colors">About the College</a></li>
+            <li><a href="academics.html" class="hover:text-emerald-950 transition-colors">Academic Programs</a></li>
+            <li><a href="admissions.html" class="hover:text-emerald-950 transition-colors">Admissions & Merit</a></li>
+            <li><a href="sports.html" class="hover:text-emerald-950 transition-colors">Sports & Athletics</a></li>
+            <li><a href="contact.html" class="hover:text-emerald-950 transition-colors font-bold text-emerald-950">Contact Administration</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Contact Details -->
+        <div>
+          <h4 class="text-xs uppercase tracking-widest font-bold text-emerald-950 mb-3">Campus Office</h4>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            College Road, Pattoki,<br>
+            District Kasur, Punjab, Pakistan.<br>
+            <span class="block mt-2">Telephone: <a href="tel:+92494421234" class="text-emerald-950 font-semibold">+92 (49) 442-1234</a></span>
+            <span>Email: <a href="mailto:info@ggcpattoki.edu.pk" class="text-emerald-950 font-semibold">info@ggcpattoki.edu.pk</a></span>
+          </p>
+        </div>
+
+        <!-- Column 4: Affiliation & Governance -->
+        <div>
+          <h4 class="text-xs uppercase tracking-widest font-bold text-emerald-950 mb-3">Governance</h4>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            Higher Education Department, Government of the Punjab.<br>
+            Affiliated with <strong>University of the Punjab, Lahore</strong>.<br>
+            Board of Intermediate & Secondary Education Lahore.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Bottom Sub-Footer -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-500 gap-4">
+        <p>&copy; 2025 Govt. Graduate College Pattoki. All rights reserved.</p>
+        <p class="font-mono text-[11px] uppercase text-emerald-950 font-bold">Autonomous Public Sector Higher Education Institution</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- JAVASCRIPT: NAVIGATION & INQUIRY FORM VALIDATION                          -->
+  <!-- ========================================================================= -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Mobile Navigation Drawer Toggle
+      const toggleBtn = document.getElementById('mobile-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const hamburgerIcon = document.getElementById('hamburger-icon');
+      const closeIcon = document.getElementById('close-icon');
+
+      if (toggleBtn && mobileMenu) {
+        toggleBtn.addEventListener('click', () => {
+          const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+          toggleBtn.setAttribute('aria-expanded', String(!isExpanded));
+          mobileMenu.classList.toggle('hidden');
+          hamburgerIcon.classList.toggle('hidden');
+          closeIcon.classList.toggle('hidden');
+        });
+      }
+
+      // 2. Client-side Form Validation & Submission Simulation
+      const form = document.getElementById('contact-form');
+      const successAlert = document.getElementById('form-success-alert');
+      const submitBtn = document.getElementById('submit-btn');
+      const btnText = document.getElementById('btn-text');
+
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+
+          let isValid = true;
+          const requiredFields = [
+            { id: 'contact-name', test: (val) => val.trim().length > 1 },
+            { id: 'contact-email', test: (val) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val.trim()) },
+            { id: 'contact-category', test: (val) => val && val.trim().length > 0 },
+            { id: 'contact-subject', test: (val) => val.trim().length > 2 },
+            { id: 'contact-message', test: (val) => val.trim().length > 5 }
+          ];
+
+          requiredFields.forEach(({ id, test }) => {
+            const el = document.getElementById(id);
+            if (!el) return;
+            const errorMsg = el.parentElement.querySelector('.input-error');
+            
+            if (!test(el.value)) {
+              isValid = false;
+              el.classList.add('border-rose-500', 'bg-rose-50/30');
+              el.classList.remove('border-stone-300');
+              if (errorMsg) errorMsg.classList.remove('hidden');
+            } else {
+              el.classList.remove('border-rose-500', 'bg-rose-50/30');
+              el.classList.add('border-stone-300');
+              if (errorMsg) errorMsg.classList.add('hidden');
+            }
+          });
+
+          if (!isValid) return;
+
+          // Simulate sending state
+          if (submitBtn && btnText) {
+            submitBtn.disabled = true;
+            btnText.textContent = 'Transmitting...';
+          }
+
+          setTimeout(() => {
+            if (successAlert) {
+              successAlert.classList.remove('hidden');
+              successAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+            form.reset();
+            if (submitBtn && btnText) {
+              submitBtn.disabled = false;
+              btnText.textContent = 'Submit Inquiry';
+            }
+          }, 600);
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

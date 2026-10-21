@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth bg-[#FDFBF7]">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Admissions & Enrollment Criteria for Session 2025–26 at Govt. Graduate College Pattoki — Intermediate (FSc, ICS, ICom, FA) and BS 4-Year Honors Programs. Merit lists, eligibility, and fee structure.">
+  <title>Admissions & Enrollment (Session 2025–26) — Govt. Graduate College Pattoki</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans strictly (Single Global Font, No Serifs) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Custom Theme Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            academic: {
+              cream: '#FDFBF7',
+              beige: '#F5F2EB',
+              sand: '#EBE6DC',
+              green: '#064E3B',
+              darkgreen: '#022C22',
+              charcoal: '#292524',
+              muted: '#78716C',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Warm Academic Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FDFBF7;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #D6D3D1;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #064E3B;
+    }
+
+    /* FAQ accordion transition utility */
+    .faq-answer {
+      transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+    }
+  </style>
+</head>
+
+<body class="bg-[#FDFBF7] text-stone-800 font-sans antialiased min-h-screen flex flex-col selection:bg-emerald-900 selection:text-white">
+
+  <!-- ========================================================================= -->
+  <!-- 1. SLIM FULL-WIDTH NAVBAR (Exact Match, 'Admissions' Active)              -->
+  <!-- ========================================================================= -->
+  <header class="w-full fixed top-0 bg-white/95 backdrop-blur-md border-b border-stone-200 z-50 px-6 py-3 transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+
+      <!-- Left Side Links: Home, About, Academics -->
+      <nav aria-label="Primary Left Navigation" class="hidden md:flex items-center space-x-6 lg:space-x-8 flex-1 justify-end pr-6 lg:pr-8">
+        <a href="index.html" class="text-xs uppercase tracking-widest font-semibold text-stone-600 hover:text-emerald-950 transition-colors">
+          Home
+        </a>
+        <a href="about.html" class="text-xs uppercase tracking-widest font-semibold text-stone-600 hover:text-emerald-950 transition-colors">
+          About
+        </a>
+        <a href="academics.html" class="text-xs uppercase tracking-widest font-semibold text-stone-600 hover:text-emerald-950 transition-colors">
+          Academics
+        </a>
+      </nav>
+
+      <!-- Center Logo Strictly (src="./logo.png", class "h-10 w-auto object-contain", NO text) -->
+      <a href="index.html" class="flex-shrink-0 mx-auto md:mx-0 flex items-center justify-center focus:outline-none" aria-label="Govt. Graduate College Pattoki Home">
+        <img 
+          src="./logo.png" 
+          alt="Govt. Graduate College Pattoki" 
+          class="h-10 w-auto object-contain"
+          onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 48 48\' fill=\'%23064E3B\'><circle cx=\'24\' cy=\'24\' r=\'22\' fill=\'%23064E3B\'/><path d=\'M24 12L36 18L24 24L12 18L24 12Z\' fill=\'%23FFFFFF\'/><path d=\'M16 22V28C16 32.4 19.6 36 24 36C28.4 36 32 32.4 32 28V22L24 26L16 22Z\' fill=\'%23FFFFFF\'/></svg>';"
+        >
+      </a>
+
+      <!-- Right Side Links: Admissions (Active), Sports, Contact -->
+      <nav aria-label="Primary Right Navigation" class="hidden md:flex items-center space-x-6 lg:space-x-8 flex-1 justify-start pl-6 lg:pl-8">
+        <a href="admissions.html" class="text-xs uppercase tracking-widest font-bold text-emerald-950 border-b-2 border-emerald-950 pb-0.5 transition-colors">
+          Admissions
+        </a>
+        <a href="sports.html" class="text-xs uppercase tracking-widest font-semibold text-stone-600 hover:text-emerald-950 transition-colors">
+          Sports
+        </a>
+        <a href="contact.html" class="text-xs uppercase tracking-widest font-semibold text-stone-600 hover:text-emerald-950 transition-colors">
+          Contact
+        </a>
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="md:hidden flex items-center">
+        <button 
+          id="mobile-toggle"
+          type="button" 
+          class="text-stone-700 hover:text-emerald-950 focus:outline-none focus:ring-2 focus:ring-emerald-900 rounded p-1"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Toggle navigation menu"
+        >
+          <svg id="hamburger-icon" class="w-6 h-6 block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-stone-200 mt-3 pt-3 pb-2 space-y-2 bg-white">
+      <a href="index.html" class="block px-3 py-2 text-xs uppercase tracking-widest font-semibold text-stone-600 hover:bg-stone-50 hover:text-emerald-950 rounded">
+        Home
+      </a>
+      <a href="about.html" class="block px-3 py-2 text-xs uppercase tracking-widest font-semibold text-stone-600 hover:bg-stone-50 hover:text-emerald-950 rounded">
+        About
+      </a>
+      <a href="academics.html" class="block px-3 py-2 text-xs uppercase tracking-widest font-semibold text-stone-600 hover:bg-stone-50 hover:text-emerald-950 rounded">
+        Academics
+      </a>
+      <a href="admissions.html" class="block px-3 py-2 text-xs uppercase tracking-widest font-bold text-emerald-950 bg-stone-100 rounded">
+        Admissions
+      </a>
+      <a href="sports.html" class="block px-3 py-2 text-xs uppercase tracking-widest font-semibold text-stone-600 hover:bg-stone-50 hover:text-emerald-950 rounded">
+        Sports
+      </a>
+      <a href="contact.html" class="block px-3 py-2 text-xs uppercase tracking-widest font-semibold text-stone-600 hover:bg-stone-50 hover:text-emerald-950 rounded">
+        Contact
+      </a>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- MAIN CONTENT CONTAINER                                                    -->
+  <!-- ========================================================================= -->
+  <main class="flex-grow pt-16">
+
+    <!-- ========================================================================= -->
+    <!-- 2. SHORT ADMISSIONS HERO BANNER (High-Contrast Dark Overlay)              -->
+    <!-- ========================================================================= -->
+    <section class="relative h-[44vh] min-h-[320px] max-h-[420px] w-full flex items-center justify-center overflow-hidden border-b border-stone-800 bg-stone-900">
+      <!-- High-Quality Unsplash Background: University lecture auditorium / registration -->
+      <img 
+        src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=2000&q=80" 
+        alt="College Students Academic Enrollment and Collaboration" 
+        class="absolute inset-0 w-full h-full object-cover object-center"
+        loading="eager"
+      >
+      <!-- Strong Dark Overlay per Mandate 2 -->
+      <div class="absolute inset-0 bg-slate-900/70 backdrop-blur-[1px]"></div>
+
+      <div class="relative z-10 max-w-4xl mx-auto text-center px-6 pt-6">
+        <!-- Breadcrumb Navigation -->
+        <nav aria-label="Breadcrumb" class="mb-3 flex items-center justify-center space-x-2 text-xs uppercase tracking-widest text-stone-300">
+          <a href="index.html" class="hover:text-white transition-colors">Home</a>
+          <span class="text-stone-400">/</span>
+          <span class="text-emerald-400 font-bold">Admissions</span>
+        </nav>
+
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-tight drop-shadow-sm">
+          Admissions & Enrollment
+        </h1>
+        <p class="mt-3 text-sm sm:text-base text-stone-200 max-w-2xl mx-auto leading-relaxed">
+          Academic Session 2025–2026. Merit-based admissions strictly administered according to the regulations of Higher Education Department Punjab, BISE Lahore, and University of the Punjab.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 3. LIVE ADMISSION CYCLE STATUS NOTIFICATION                               -->
+    <!-- ========================================================================= -->
+    <section class="bg-[#F5F2EB] border-b border-stone-200 py-4 px-6">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
+        
+        <!-- Live Cycle Pulse Indicator -->
+        <div class="flex items-center space-x-3">
+          <span class="relative flex h-3 w-3">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-700"></span>
+          </span>
+          <p class="text-stone-800 font-semibold">
+            <span class="uppercase tracking-wider font-bold text-emerald-950 mr-1.5">Fall 2025 Cycle Active:</span>
+            Intermediate (1st Year) & BS 4-Year Admissions Open. OCAS Punjab Portal is accepting verified submissions.
+          </p>
+        </div>
+
+        <!-- Quick Action Buttons -->
+        <div class="flex items-center space-x-4 flex-shrink-0">
+          <a href="#application-roadmap" class="text-xs font-bold text-emerald-950 hover:underline flex items-center">
+            How to Apply
+            <svg class="w-3.5 h-3.5 ml-1 text-emerald-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </a>
+          <span class="text-stone-300">|</span>
+          <a href="#downloads-archive" class="inline-flex items-center px-3 py-1 bg-emerald-900 hover:bg-emerald-950 text-white rounded text-xs font-semibold transition-colors shadow-sm">
+            Download Prospectus (PDF)
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 4. IMPORTANT ADMISSION DEADLINES & CALENDAR                                -->
+    <!-- ========================================================================= -->
+    <section class="py-12 px-6 sm:px-8 border-b border-stone-200 bg-white">
+      <div class="max-w-7xl mx-auto">
+        
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <p class="text-xs uppercase tracking-widest font-bold text-emerald-900 mb-2">Important Deadlines</p>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">Key Dates for Session 2025–26</h2>
+          <p class="mt-2 text-xs sm:text-sm text-stone-600">
+            Applicants are strictly advised to adhere to the notified dates. Late applications are not entertained under Punjab Higher Education regulations.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Date Card 1 -->
+          <div class="p-6 bg-[#FDFBF7] rounded-xl border border-stone-200 text-center hover:border-emerald-800 transition-colors">
+            <span class="inline-block px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-emerald-900 bg-emerald-50 rounded-full mb-3">Phase 01</span>
+            <div class="text-2xl font-black text-emerald-950">Aug 15, 2025</div>
+            <h3 class="text-sm font-bold text-stone-800 mt-2">Online Portal Opens</h3>
+            <p class="text-xs text-stone-600 mt-1 leading-relaxed">
+              OCAS portal registration begins for Intermediate & BS Program applications.
+            </p>
+          </div>
+
+          <!-- Date Card 2 -->
+          <div class="p-6 bg-[#FDFBF7] rounded-xl border border-stone-200 text-center hover:border-emerald-800 transition-colors">
+            <span class="inline-block px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-amber-900 bg-amber-50 rounded-full mb-3">Phase 02</span>
+            <div class="text-2xl font-black text-emerald-950">Sep 05, 2025</div>
+            <h3 class="text-sm font-bold text-stone-800 mt-2">Application Deadline</h3>
+            <p class="text-xs text-stone-600 mt-1 leading-relaxed">
+              Last date for online form submission and physical document verification.
+            </p>
+          </div>
+
+          <!-- Date Card 3 -->
+          <div class="p-6 bg-[#FDFBF7] rounded-xl border border-stone-200 text-center hover:border-emerald-800 transition-colors">
+            <span class="inline-block px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-emerald-900 bg-emerald-50 rounded-full mb-3">Phase 03</span>
+            <div class="text-2xl font-black text-emerald-950">Sep 12, 2025</div>
+            <h3 class="text-sm font-bold text-stone-800 mt-2">1st Open Merit List</h3>
+            <p class="text-xs text-stone-600 mt-1 leading-relaxed">
+              Public display of the provisional first merit list on notice boards and portal.
+            </p>
+          </div>
+
+          <!-- Date Card 4 -->
+          <div class="p-6 bg-[#FDFBF7] rounded-xl border border-stone-200 text-center hover:border-emerald-800 transition-colors">
+            <span class="inline-block px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-stone-700 bg-stone-200 rounded-full mb-3">Phase 04</span>
+            <div class="text-2xl font-black text-emerald-950">Sep 22, 2025</div>
+            <h3 class="text-sm font-bold text-stone-800 mt-2">Commencement of Classes</h3>
+            <p class="text-xs text-stone-600 mt-1 leading-relaxed">
+              Mandatory orientation program for enrolled 1st-year Intermediate & BS students.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 5. TABBED ELIGIBILITY CRITERIA & PROGRAM GUIDELINES                       -->
+    <!-- ========================================================================= -->
+    <section class="py-16 px-6 sm:px-8 border-b border-stone-200 bg-[#FDFBF7]" id="eligibility-criteria">
+      <div class="max-w-7xl mx-auto">
+        
+        <div class="text-center max-w-3xl mx-auto mb-10">
+          <p class="text-xs uppercase tracking-widest font-bold text-emerald-900 mb-2">Academic Standards</p>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">Eligibility Criteria & Quota Policies</h2>
+          <p class="mt-2 text-xs sm:text-sm text-stone-600 leading-relaxed">
+            Review the minimum academic percentages, prerequisite coursework, and government seat allocations before submitting your admission dossier.
+          </p>
+
+          <!-- Interactive Tab Buttons -->
+          <div class="mt-8 inline-flex p-1 bg-stone-200 rounded-lg shadow-inner" role="tablist" aria-label="Eligibility Program Tabs">
+            <button 
+              id="tab-btn-inter"
+              type="button" 
+              role="tab" 
+              aria-selected="true" 
+              aria-controls="tab-panel-inter"
+              class="px-5 py-2.5 rounded-md text-xs uppercase tracking-wider font-bold transition-all bg-white text-emerald-950 shadow-sm"
+            >
+              Intermediate (FSc / ICS / ICom / FA)
+            </button>
+            <button 
+              id="tab-btn-bs"
+              type="button" 
+              role="tab" 
+              aria-selected="false" 
+              aria-controls="tab-panel-bs"
+              class="px-5 py-2.5 rounded-md text-xs uppercase tracking-wider font-semibold text-stone-600 hover:text-emerald-950 transition-all"
+            >
+              BS 4-Year Honors Degrees
+            </button>
+            <button 
+              id="tab-btn-quota"
+              type="button" 
+              role="tab" 
+              aria-selected="false" 
+              aria-controls="tab-panel-quota"
+              class="px-5 py-2.5 rounded-md text-xs uppercase tracking-wider font-semibold text-stone-600 hover:text-emerald-950 transition-all"
+            >
+              Reserved Quotas & Sports
+            </button>
+          </div>
+        </div>
+
+        <!-- ==================== TAB PANEL 1: INTERMEDIATE ==================== -->
+        <div id="tab-panel-inter" role="tabpanel" aria-labelledby="tab-btn-inter" class="block">
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- F.Sc Pre-Medical Card -->
+            <div class="bg-white p-6 rounded-xl border border-stone-200 shadow-sm flex flex-col justify-between hover:border-emerald-800 transition-all">
+              <div>
+                <span class="text-[10px] uppercase font-bold tracking-widest text-emerald-900 bg-emerald-50 px-2.5 py-1 rounded">Science Stream</span>
+                <h3 class="text-base font-bold text-stone-900 mt-3">F.Sc Pre-Medical</h3>
+                <p class="text-xs text-stone-500 mt-0.5">2-Year Higher Secondary Program</p>
+                <div class="mt-4 pt-4 border-t border-stone-100 space-y-2 text-xs text-stone-600">
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-stone-700">Minimum Marks:</span>
+                    <span class="font-bold text-emerald-950">60% (Matric Science)</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-stone-700">Prerequisites:</span>
+                    <span>Biology, Chemistry, Physics</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-stone-700">Max Age:</span>
+                    <span>18 Years</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-stone-700">Total Seats:</span>
+                    <span class="font-bold text-stone-900">120 Seats</span>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-5 pt-3 border-t border-stone-100 text-[11px] text-stone-500">
+                Affiliated with Board of Intermediate & Secondary Education (BISE) Lahore.
+              </div>
+            </div>
+
+            <!-- F.Sc Pre-Engineering Card -->
+            <div class="bg-white p-6 rounded-xl border border-stone-200 shadow-sm flex flex-col justify-between hover:border-emerald-800 transition-all">
+              <div>
+                <span class="text-[10px] uppercase font-bold tracking-widest text-emerald-900 bg-emerald-50 px-2.5 py-1 rounded">Science Stream</span>
+                <h3 class="text-base font-bold text-stone-900 mt-3">F.Sc Pre-Engineering</h3>
+                <p class="text-xs text-stone-500 mt-0.5">2-Year Higher Secondary Program</p>
+                <div class="mt-4 pt-4 border-t border-stone-100 space-y-2 text-xs text-stone-600">
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-stone-700">Minimum Marks:</span>
+                    <span class="font-bold text-emerald-950">60% (Matric Science)</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-stone-700">Prerequisites:</span>
+                    <span>Math, Physics, Chemistry</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-stone-700">Max Age:</span>
+                    <span>18 Years</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-stone-700">Total Seats:</span>
+                    <span class="font-bold text-stone-900">100 Seats</span>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-5 pt-3 border-t border-stone-100 text-[11px] text-stone-500">
+                Affiliated with Board of Intermediate & Secondary Education (BISE) Lahore.
+              </div>
+            </div>
+
+            <!-- ICS Card -->
+            <div class="bg-white p-6 rounded-xl border border-stone-200 shadow-sm flex flex-col justify-between hover:border-emerald-800 transition-all">
+              <div>
+                <span class="text-[10px] uppercase font-bold tracking-widest text-emerald-900 bg-emerald-50 px-2.5 py-1 rounded">Computer Stream</span>
+                <h3 class="text-base font-bold text-stone-900 mt-3">ICS (Computer Science)</h3>
+                <p class="text-xs text-stone-500 mt-0.5">2-Year Higher Secondary Program</p>
+                <div class="mt-4 pt-4 border-t border-stone-100 space-y-2 text-xs text-stone-600">
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-stone-700">Minimum Marks:</span>
+                    <span class="font-bold text-emerald-950">50% (Matriculation)</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-stone-700">Elective Combos:</span>
+                    <span>Math + Physics / Stats</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-stone-700">Max Age:</span>
+                    <span>18 Years</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-stone-700">Total Seats:</span>
+                    <span class="font-bold text-stone-900">140 Seats</span>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-5 pt-3 border-t border-stone-100 text-[11px] text-stone-500">
+                High-demand program with 2 specialized modern computer laboratories.
+              </div>
+            </div>
+
+            <!-- I.Com & F.A. Card -->
+            <div class="bg-white p-6 rounded-xl border border-stone-200 shadow-sm flex flex-col justify-between hover:border-emerald-800 transition-all">
+              <div>
+                <span class="text-[10px] uppercase font-bold tracking-widest text-emerald-900 bg-emerald-50 px-2.5 py-1 rounded">Commerce & Arts</span>
+                <h3 class="text-base font-bold text-stone-900 mt-3">I.Com & F.A. General</h3>
+                <p class="text-xs text-stone-500 mt-0.5">2-Year Higher Secondary Programs</p>
+                <div class="mt-4 pt-4 border-t border-stone-100 space-y-2 text-xs text-stone-600">
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-stone-700">Minimum Marks:</span>
+                    <span class="font-bold text-emerald-950">45% (Matriculation)</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-stone-700">Prerequisites:</span>
+                    <span>Matric (Any Group)</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-stone-700">Max Age:</span>
+                    <span>18 Years</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-stone-700">Total Seats:</span>
+                    <span class="font-bold text-stone-900">180 Seats</span>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-5 pt-3 border-t border-stone-100 text-[11px] text-stone-500">
+                Wide choice of humanities electives: Civics, Economics, History, Urdu Adv.
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ==================== TAB PANEL 2: BS 4-YEAR ==================== -->
+        <div id="tab-panel-bs" role="tabpanel" aria-labelledby="tab-btn-bs" class="hidden">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- BS Computer Science -->
+            <div class="bg-white p-6 rounded-xl border border-stone-200 shadow-sm flex flex-col justify-between hover:border-emerald-800 transition-all">
+              <div>
+                <span class="text-[10px] uppercase font-bold tracking-widest text-emerald-900 bg-emerald-50 px-2.5 py-1 rounded">8 Semesters / 134 Credits</span>
+                <h3 class="text-base font-bold text-stone-900 mt-3">BS Computer Science (BSCS)</h3>
+                <p class="text-xs text-stone-500 mt-0.5">Affiliated with University of the Punjab</p>
+                <div class="mt-4 pt-4 border-t border-stone-100 space-y-2 text-xs text-stone-600">
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-stone-700">Minimum Eligibility:</span>
+                    <span class="font-bold text-emerald-950">50% in ICS or F.Sc (with Math)</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-stone-700">Merit Formula:</span>
+                    <span>100% Academic Aggregate (HED)</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-stone-700">Max Age Limit:</span>
+                    <span>24 Years (Relaxable up to 2 yrs)</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-stone-700">Intake Capacity:</span>
+                    <span class="font-bold text-stone-900">50 Morning Seats</span>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-5 pt-3 border-t border-stone-100 text-[11px] text-stone-500">
+                Rigorous curriculum covering Algorithms, Software Eng., AI, and Database Systems.
+              </div>
+            </div>
+
+            <!-- BS Natural Sciences (Physics / Chemistry / Botany / Zoology / Math) -->
+            <div class="bg-white p-6 rounded-xl border border-stone-200 shadow-sm flex flex-col justify-between hover:border-emerald-800 transition-all">
+              <div>
+                <span class="text-[10px] uppercase font-bold tracking-widest text-emerald-900 bg-emerald-50 px-2.5 py-1 rounded">8 Semesters / 132 Credits</span>
+                <h3 class="text-base font-bold text-stone-900 mt-3">BS Natural Sciences</h3>
+                <p class="text-xs text-stone-500 mt-0.5">Physics, Chemistry, Botany, Zoology, Math</p>
+                <div class="mt-4 pt-4 border-t border-stone-100 space-y-2 text-xs text-stone-600">
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-stone-700">Minimum Eligibility:</span>
+                    <span class="font-bold text-emerald-950">45% in relevant F.Sc Stream</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-stone-700">Subject Requirement:</span>
+                    <span>Major subject in Intermediate</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-stone-700">Max Age Limit:</span>
+                    <span>24 Years</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-stone-700">Intake per Dept:</span>
+                    <span class="font-bold text-stone-900">40 Seats Each</span>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-5 pt-3 border-t border-stone-100 text-[11px] text-stone-500">
+                Includes extensive hands-on research and laboratory experiments every semester.
+              </div>
+            </div>
+
+            <!-- BS Humanities & Social Sciences (English, Economics, Urdu, Islamic Studies) -->
+            <div class="bg-white p-6 rounded-xl border border-stone-200 shadow-sm flex flex-col justify-between hover:border-emerald-800 transition-all">
+              <div>
+                <span class="text-[10px] uppercase font-bold tracking-widest text-emerald-900 bg-emerald-50 px-2.5 py-1 rounded">8 Semesters / 130 Credits</span>
+                <h3 class="text-base font-bold text-stone-900 mt-3">BS Humanities & Commerce</h3>
+                <p class="text-xs text-stone-500 mt-0.5">English Lit, Urdu, Economics, B.Com Hons</p>
+                <div class="mt-4 pt-4 border-t border-stone-100 space-y-2 text-xs text-stone-600">
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-stone-700">Minimum Eligibility:</span>
+                    <span class="font-bold text-emerald-950">45% in FA, FSc, ICS, or ICom</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-stone-700">Language Proficiency:</span>
+                    <span>Min 50 marks in elective if applying BS English</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-stone-700">Max Age Limit:</span>
+                    <span>24 Years</span>
+                  </div>
+                  <div class="flex justify-between">
+                    <span class="font-semibold text-stone-700">Intake Capacity:</span>
+                    <span class="font-bold text-stone-900">45 Seats per Discipline</span>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-5 pt-3 border-t border-stone-100 text-[11px] text-stone-500">
+                Fosters critical thinking, institutional research, and public administration acumen.
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ==================== TAB PANEL 3: QUOTA POLICIES ==================== -->
+        <div id="tab-panel-quota" role="tabpanel" aria-labelledby="tab-btn-quota" class="hidden">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <!-- Sports Quota -->
+            <div class="bg-white p-6 rounded-xl border border-stone-200 shadow-sm hover:border-emerald-800 transition-all">
+              <span class="text-[10px] uppercase font-bold tracking-widest text-emerald-900 bg-emerald-50 px-2.5 py-1 rounded">2% Allocation</span>
+              <h3 class="text-base font-bold text-stone-900 mt-3">Sports Excellence Quota</h3>
+              <p class="text-xs text-stone-600 mt-2 leading-relaxed">
+                Reserved for district, divisional, or board-level medalists in Cricket, Football, Athletics, Badminton, and Table Tennis.
+              </p>
+              <div class="mt-4 pt-4 border-t border-stone-100 text-xs text-stone-600 space-y-1">
+                <p><strong>Verification:</strong> Physical trials by the Sports Directorate.</p>
+                <p><strong>Required:</strong> Verified BISE or Divisional sports certificates.</p>
+              </div>
+            </div>
+
+            <!-- Disabled / Special Needs Quota -->
+            <div class="bg-white p-6 rounded-xl border border-stone-200 shadow-sm hover:border-emerald-800 transition-all">
+              <span class="text-[10px] uppercase font-bold tracking-widest text-emerald-900 bg-emerald-50 px-2.5 py-1 rounded">2% Allocation</span>
+              <h3 class="text-base font-bold text-stone-900 mt-3">Special Candidates Quota</h3>
+              <p class="text-xs text-stone-600 mt-2 leading-relaxed">
+                Reserved for candidates with physical disabilities as verified by the District Social Welfare Assessment Board.
+              </p>
+              <div class="mt-4 pt-4 border-t border-stone-100 text-xs text-stone-600 space-y-1">
+                <p><strong>Verification:</strong> District Medical Disability Certificate.</p>
+                <p><strong>Support:</strong> Full fee concession & accessible ground-floor classrooms.</p>
+              </div>
+            </div>
+
+            <!-- College Teachers / Defense Quota -->
+            <div class="bg-white p-6 rounded-xl border border-stone-200 shadow-sm hover:border-emerald-800 transition-all">
+              <span class="text-[10px] uppercase font-bold tracking-widest text-emerald-900 bg-emerald-50 px-2.5 py-1 rounded">Statutory Quotas</span>
+              <h3 class="text-base font-bold text-stone-900 mt-3">Kinship & Defense Quotas</h3>
+              <p class="text-xs text-stone-600 mt-2 leading-relaxed">
+                Reserved seats for children of college teaching/non-teaching staff and wards of Shuhada/armed forces personnel as per Punjab Government notification.
+              </p>
+              <div class="mt-4 pt-4 border-t border-stone-100 text-xs text-stone-600 space-y-1">
+                <p><strong>Verification:</strong> Service booklet / certification from competent authority.</p>
+                <p><strong>Merit:</strong> Subject to departmental scrutiny.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 6. 5-STEP APPLICATION ROADMAP (Connected Process Flow)                    -->
+    <!-- ========================================================================= -->
+    <section class="py-16 px-6 sm:px-8 border-b border-stone-200 bg-white" id="application-roadmap">
+      <div class="max-w-7xl mx-auto">
+        
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <p class="text-xs uppercase tracking-widest font-bold text-emerald-900 mb-2">Step-by-Step Procedure</p>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">The 5-Step Enrollment Roadmap</h2>
+          <p class="mt-2 text-xs sm:text-sm text-stone-600 leading-relaxed">
+            Follow this official 5-stage procedure to successfully register your application and confirm your enrollment at Govt. Graduate College Pattoki.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-6 relative">
+          
+          <!-- Step 1 -->
+          <div class="relative flex flex-col items-center text-center p-6 bg-[#FDFBF7] rounded-xl border border-stone-200">
+            <div class="w-12 h-12 rounded-full bg-emerald-900 text-white flex items-center justify-center font-extrabold text-base mb-4 shadow-sm">
+              01
+            </div>
+            <h3 class="text-sm font-bold text-stone-900 mb-1">Online OCAS Portal</h3>
+            <p class="text-xs text-stone-600 leading-relaxed">
+              Visit the Punjab Online College Admissions System (OCAS) website. Select <strong>Govt. Graduate College Pattoki</strong> and choose your desired discipline.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="relative flex flex-col items-center text-center p-6 bg-[#FDFBF7] rounded-xl border border-stone-200">
+            <div class="w-12 h-12 rounded-full bg-emerald-900 text-white flex items-center justify-center font-extrabold text-base mb-4 shadow-sm">
+              02
+            </div>
+            <h3 class="text-sm font-bold text-stone-900 mb-1">Bank Challan Payment</h3>
+            <p class="text-xs text-stone-600 leading-relaxed">
+              Generate the computerized processing fee challan (Rs. 100/-) and deposit it at any authorized branch of The Bank of Punjab (BOP).
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="relative flex flex-col items-center text-center p-6 bg-[#FDFBF7] rounded-xl border border-stone-200">
+            <div class="w-12 h-12 rounded-full bg-emerald-900 text-white flex items-center justify-center font-extrabold text-base mb-4 shadow-sm">
+              03
+            </div>
+            <h3 class="text-sm font-bold text-stone-900 mb-1">Document Scrutiny</h3>
+            <p class="text-xs text-stone-600 leading-relaxed">
+              Submit verified photocopies of your Result Card, CNIC/B-Form, Character Certificate, and photographs to the Campus Admissions Desk.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="relative flex flex-col items-center text-center p-6 bg-[#FDFBF7] rounded-xl border border-stone-200">
+            <div class="w-12 h-12 rounded-full bg-emerald-900 text-white flex items-center justify-center font-extrabold text-base mb-4 shadow-sm">
+              04
+            </div>
+            <h3 class="text-sm font-bold text-stone-900 mb-1">Merit List Verification</h3>
+            <p class="text-xs text-stone-600 leading-relaxed">
+              Check the notified Open Merit Lists published on the college campus notice boards and official web portal on the scheduled dates.
+            </p>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="relative flex flex-col items-center text-center p-6 bg-[#FDFBF7] rounded-xl border border-stone-200">
+            <div class="w-12 h-12 rounded-full bg-emerald-900 text-white flex items-center justify-center font-extrabold text-base mb-4 shadow-sm">
+              05
+            </div>
+            <h3 class="text-sm font-bold text-stone-900 mb-1">Dues & Roll Number</h3>
+            <p class="text-xs text-stone-600 leading-relaxed">
+              Deposit the subsidized semester/annual dues at the college fee booth and collect your formal College ID card and Class Section Allotment.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Official Warning Box -->
+        <div class="mt-10 p-4 bg-amber-50/70 border border-amber-200 rounded-lg flex items-start space-x-3 text-xs text-amber-900 max-w-4xl mx-auto">
+          <svg class="w-5 h-5 flex-shrink-0 text-amber-700 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          <p class="leading-relaxed">
+            <strong>Mandatory Document Scrutiny Rule:</strong> Original matriculation or intermediate certificates, character certificates, and character testimonials must be produced in person at the time of final admission clearance. False declarations result in immediate cancellation of candidature.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 7. MERIT LISTS & OFFICIAL DOWNLOAD ARCHIVES                               -->
+    <!-- ========================================================================= -->
+    <section class="py-16 px-6 sm:px-8 border-b border-stone-200 bg-[#FDFBF7]" id="downloads-archive">
+      <div class="max-w-7xl mx-auto">
+        
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <p class="text-xs uppercase tracking-widest font-bold text-emerald-900 mb-2">Publications & Lists</p>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">Merit Lists & Official Documents</h2>
+          <p class="mt-2 text-xs sm:text-sm text-stone-600 leading-relaxed">
+            Download certified PDF circulars, official admission guidelines, fee structures, and published open merit lists.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Download Card 1: Prospectus -->
+          <div class="bg-white p-6 rounded-xl border border-stone-200 shadow-sm flex flex-col justify-between hover:border-emerald-800 transition-colors">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-[10px] uppercase font-bold tracking-wider text-emerald-900 bg-emerald-50 px-2 py-0.5 rounded">PDF • 4.8 MB</span>
+                <svg class="w-5 h-5 text-stone-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+              </div>
+              <h3 class="text-sm font-bold text-stone-900 leading-snug">Official Prospectus 2025–26</h3>
+              <p class="text-xs text-stone-500 mt-1 leading-relaxed">
+                Complete guide containing code of conduct, faculty profiles, and examination rules.
+              </p>
+              <p class="text-[11px] text-stone-400 mt-3 font-mono">Released: July 28, 2025</p>
+            </div>
+            <a 
+              href="#" 
+              class="mt-5 w-full inline-flex items-center justify-center px-4 py-2 bg-stone-100 hover:bg-emerald-900 hover:text-white text-stone-800 text-xs font-semibold rounded transition-colors group"
+              onclick="alert('Demo: The official 2025–26 Prospectus document would be downloaded in production.'); return false;"
+            >
+              <span>Download PDF</span>
+              <svg class="w-3.5 h-3.5 ml-1.5 transition-transform group-hover:translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Download Card 2: 1st Merit List (BS Programs) -->
+          <div class="bg-white p-6 rounded-xl border border-stone-200 shadow-sm flex flex-col justify-between hover:border-emerald-800 transition-colors">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-[10px] uppercase font-bold tracking-wider text-emerald-900 bg-emerald-50 px-2 py-0.5 rounded">PDF • 1.2 MB</span>
+                <svg class="w-5 h-5 text-stone-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+              </div>
+              <h3 class="text-sm font-bold text-stone-900 leading-snug">1st Merit List — BS Programs</h3>
+              <p class="text-xs text-stone-500 mt-1 leading-relaxed">
+                Computer Science, Physics, Chemistry, English, and Economics open merit selections.
+              </p>
+              <p class="text-[11px] text-stone-400 mt-3 font-mono">Released: Sep 12, 2025</p>
+            </div>
+            <a 
+              href="#" 
+              class="mt-5 w-full inline-flex items-center justify-center px-4 py-2 bg-stone-100 hover:bg-emerald-900 hover:text-white text-stone-800 text-xs font-semibold rounded transition-colors group"
+              onclick="alert('Demo: The official 1st BS Merit List PDF would be downloaded in production.'); return false;"
+            >
+              <span>Download PDF</span>
+              <svg class="w-3.5 h-3.5 ml-1.5 transition-transform group-hover:translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Download Card 3: 1st Merit List (Intermediate) -->
+          <div class="bg-white p-6 rounded-xl border border-stone-200 shadow-sm flex flex-col justify-between hover:border-emerald-800 transition-colors">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-[10px] uppercase font-bold tracking-wider text-emerald-900 bg-emerald-50 px-2 py-0.5 rounded">PDF • 980 KB</span>
+                <svg class="w-5 h-5 text-stone-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+              </div>
+              <h3 class="text-sm font-bold text-stone-900 leading-snug">1st Merit List — Intermediate</h3>
+              <p class="text-xs text-stone-500 mt-1 leading-relaxed">
+                F.Sc Pre-Med, Pre-Eng, ICS, and I.Com selected applicant roll numbers and cutoffs.
+              </p>
+              <p class="text-[11px] text-stone-400 mt-3 font-mono">Released: Sep 12, 2025</p>
+            </div>
+            <a 
+              href="#" 
+              class="mt-5 w-full inline-flex items-center justify-center px-4 py-2 bg-stone-100 hover:bg-emerald-900 hover:text-white text-stone-800 text-xs font-semibold rounded transition-colors group"
+              onclick="alert('Demo: The official 1st Intermediate Merit List PDF would be downloaded in production.'); return false;"
+            >
+              <span>Download PDF</span>
+              <svg class="w-3.5 h-3.5 ml-1.5 transition-transform group-hover:translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Download Card 4: Fee Structure Voucher -->
+          <div class="bg-white p-6 rounded-xl border border-stone-200 shadow-sm flex flex-col justify-between hover:border-emerald-800 transition-colors">
+            <div>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-[10px] uppercase font-bold tracking-wider text-emerald-900 bg-emerald-50 px-2 py-0.5 rounded">PDF • 450 KB</span>
+                <svg class="w-5 h-5 text-stone-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                </svg>
+              </div>
+              <h3 class="text-sm font-bold text-stone-900 leading-snug">Fee Voucher & Bank Challan</h3>
+              <p class="text-xs text-stone-500 mt-1 leading-relaxed">
+                Bank of Punjab challan template, fund breakup, and fee concession form.
+              </p>
+              <p class="text-[11px] text-stone-400 mt-3 font-mono">Released: July 28, 2025</p>
+            </div>
+            <a 
+              href="#" 
+              class="mt-5 w-full inline-flex items-center justify-center px-4 py-2 bg-stone-100 hover:bg-emerald-900 hover:text-white text-stone-800 text-xs font-semibold rounded transition-colors group"
+              onclick="alert('Demo: The official Fee Voucher Template would be downloaded in production.'); return false;"
+            >
+              <span>Download PDF</span>
+              <svg class="w-3.5 h-3.5 ml-1.5 transition-transform group-hover:translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+              </svg>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 8. TRANSPARENT FEE STRUCTURE TABLE                                        -->
+    <!-- ========================================================================= -->
+    <section class="py-16 px-6 sm:px-8 border-b border-stone-200 bg-white">
+      <div class="max-w-7xl mx-auto">
+        
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <p class="text-xs uppercase tracking-widest font-bold text-emerald-900 mb-2">Public Sector Transparency</p>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">Institutional Fee Structure (2025–26)</h2>
+          <p class="mt-2 text-xs sm:text-sm text-stone-600 leading-relaxed">
+            As an autonomous government graduate college, fees are heavily subsidized by the Government of the Punjab to ensure high-quality education remains accessible to all meritorious students.
+          </p>
+        </div>
+
+        <!-- Responsive Table Container with Overflow -->
+        <div class="overflow-x-auto rounded-xl border border-stone-200 shadow-sm bg-white">
+          <table class="w-full text-left text-xs text-stone-700">
+            <thead class="bg-[#F5F2EB] text-emerald-950 uppercase tracking-wider text-[11px] font-bold border-b border-stone-300">
+              <tr>
+                <th scope="col" class="px-6 py-4">Program Category</th>
+                <th scope="col" class="px-6 py-4">Admission Fee</th>
+                <th scope="col" class="px-6 py-4">Tuition Fee</th>
+                <th scope="col" class="px-6 py-4">Lab & IT Charges</th>
+                <th scope="col" class="px-6 py-4">Misc. College Funds</th>
+                <th scope="col" class="px-6 py-4 text-right">Approx. Total Payable</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-stone-200">
+              
+              <!-- Row 1: F.Sc Pre-Med / Pre-Eng -->
+              <tr class="hover:bg-stone-50 transition-colors">
+                <th scope="row" class="px-6 py-4 font-bold text-stone-900">
+                  F.Sc (Pre-Medical & Pre-Engineering)
+                  <span class="block text-[10px] font-normal text-stone-500">Annual System (1st Year)</span>
+                </th>
+                <td class="px-6 py-4">PKR 1,200</td>
+                <td class="px-6 py-4">PKR 2,400 / yr</td>
+                <td class="px-6 py-4">PKR 1,500 / yr</td>
+                <td class="px-6 py-4">PKR 1,800</td>
+                <td class="px-6 py-4 font-bold text-emerald-950 text-right">PKR 6,900 / yr</td>
+              </tr>
+
+              <!-- Row 2: ICS -->
+              <tr class="hover:bg-stone-50 transition-colors">
+                <th scope="row" class="px-6 py-4 font-bold text-stone-900">
+                  ICS (Computer Science Stream)
+                  <span class="block text-[10px] font-normal text-stone-500">Annual System (1st Year)</span>
+                </th>
+                <td class="px-6 py-4">PKR 1,200</td>
+                <td class="px-6 py-4">PKR 2,400 / yr</td>
+                <td class="px-6 py-4">PKR 2,200 / yr</td>
+                <td class="px-6 py-4">PKR 1,800</td>
+                <td class="px-6 py-4 font-bold text-emerald-950 text-right">PKR 7,600 / yr</td>
+              </tr>
+
+              <!-- Row 3: I.Com & F.A. -->
+              <tr class="hover:bg-stone-50 transition-colors">
+                <th scope="row" class="px-6 py-4 font-bold text-stone-900">
+                  I.Com & F.A. (General / Humanities)
+                  <span class="block text-[10px] font-normal text-stone-500">Annual System (1st Year)</span>
+                </th>
+                <td class="px-6 py-4">PKR 1,200</td>
+                <td class="px-6 py-4">PKR 2,000 / yr</td>
+                <td class="px-6 py-4">Nil</td>
+                <td class="px-6 py-4">PKR 1,800</td>
+                <td class="px-6 py-4 font-bold text-emerald-950 text-right">PKR 5,000 / yr</td>
+              </tr>
+
+              <!-- Row 4: BS Computer Science -->
+              <tr class="hover:bg-stone-50 transition-colors bg-emerald-50/20">
+                <th scope="row" class="px-6 py-4 font-bold text-stone-900">
+                  BS Computer Science (BSCS)
+                  <span class="block text-[10px] font-normal text-stone-500">Semester System (Per Semester)</span>
+                </th>
+                <td class="px-6 py-4">PKR 2,500 (One-time)</td>
+                <td class="px-6 py-4">PKR 9,500 / sem</td>
+                <td class="px-6 py-4">PKR 3,500 / sem</td>
+                <td class="px-6 py-4">PKR 2,500 / sem</td>
+                <td class="px-6 py-4 font-bold text-emerald-950 text-right">PKR 18,000 (1st Sem)</td>
+              </tr>
+
+              <!-- Row 5: BS Natural Sciences -->
+              <tr class="hover:bg-stone-50 transition-colors">
+                <th scope="row" class="px-6 py-4 font-bold text-stone-900">
+                  BS Physics / Chemistry / Botany / Zoology / Math
+                  <span class="block text-[10px] font-normal text-stone-500">Semester System (Per Semester)</span>
+                </th>
+                <td class="px-6 py-4">PKR 2,500 (One-time)</td>
+                <td class="px-6 py-4">PKR 7,500 / sem</td>
+                <td class="px-6 py-4">PKR 2,500 / sem</td>
+                <td class="px-6 py-4">PKR 2,000 / sem</td>
+                <td class="px-6 py-4 font-bold text-emerald-950 text-right">PKR 14,500 (1st Sem)</td>
+              </tr>
+
+              <!-- Row 6: BS Humanities -->
+              <tr class="hover:bg-stone-50 transition-colors">
+                <th scope="row" class="px-6 py-4 font-bold text-stone-900">
+                  BS English / Economics / Urdu / Islamic Studies
+                  <span class="block text-[10px] font-normal text-stone-500">Semester System (Per Semester)</span>
+                </th>
+                <td class="px-6 py-4">PKR 2,500 (One-time)</td>
+                <td class="px-6 py-4">PKR 6,500 / sem</td>
+                <td class="px-6 py-4">Nil</td>
+                <td class="px-6 py-4">PKR 2,000 / sem</td>
+                <td class="px-6 py-4 font-bold text-emerald-950 text-right">PKR 11,000 (1st Sem)</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Scholarship & Financial Assistance Callout -->
+        <div class="mt-6 flex flex-col sm:flex-row items-center justify-between p-4 bg-[#FDFBF7] border border-stone-200 rounded-lg text-xs text-stone-600 gap-3">
+          <div class="flex items-center space-x-2">
+            <svg class="w-4 h-4 text-emerald-900 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span><strong>Financial Aid:</strong> Meritorious and deserving students are eligible for PEEF (Punjab Educational Endowment Fund), Mora Scholarship, and College Benevolent Fund concessions.</span>
+          </div>
+          <a href="contact.html" class="text-emerald-950 font-bold hover:underline flex-shrink-0">Inquire at Scholarship Office &rarr;</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 9. FREQUENTLY ASKED QUESTIONS (Interactive Vanilla JS Accordion)          -->
+    <!-- ========================================================================= -->
+    <section class="py-16 px-6 sm:px-8 border-b border-stone-200 bg-[#FDFBF7]">
+      <div class="max-w-4xl mx-auto">
+        
+        <div class="text-center mb-12">
+          <p class="text-xs uppercase tracking-widest font-bold text-emerald-900 mb-2">Applicant Assistance</p>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">Admissions FAQ</h2>
+          <p class="mt-2 text-xs sm:text-sm text-stone-600">
+            Answers to common questions regarding eligibility, age relaxation, quotas, and registration steps.
+          </p>
+        </div>
+
+        <div class="space-y-3" id="faq-accordion">
+          
+          <!-- FAQ Item 1 -->
+          <div class="border border-stone-200 rounded-lg bg-white overflow-hidden transition-all duration-200">
+            <button 
+              type="button" 
+              class="faq-button w-full px-6 py-4 text-left flex items-center justify-between text-stone-900 font-bold text-sm hover:text-emerald-950 focus:outline-none"
+              aria-expanded="false"
+            >
+              <span>How is open merit calculated for BS 4-Year degree programs?</span>
+              <svg class="faq-icon w-4 h-4 text-stone-500 transform transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="faq-answer max-h-0 overflow-hidden px-6 text-xs text-stone-600 leading-relaxed border-t border-transparent">
+              <p class="pb-4 pt-1">
+                For BS 4-Year degree programs, the merit is calculated as per the Higher Education Department (HED) Punjab formula: <strong>100% aggregate based on Intermediate (HSSC) total marks</strong>. Candidates with certified <em>Hafiz-e-Quran</em> credentials receive an additional 20 marks added directly to their obtained aggregate score upon clearing the oral recitation test conducted by the College Quran Committee.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 2 -->
+          <div class="border border-stone-200 rounded-lg bg-white overflow-hidden transition-all duration-200">
+            <button 
+              type="button" 
+              class="faq-button w-full px-6 py-4 text-left flex items-center justify-between text-stone-900 font-bold text-sm hover:text-emerald-950 focus:outline-none"
+              aria-expanded="false"
+            >
+              <span>Can I apply for multiple academic programs simultaneously?</span>
+              <svg class="faq-icon w-4 h-4 text-stone-500 transform transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="faq-answer max-h-0 overflow-hidden px-6 text-xs text-stone-600 leading-relaxed border-t border-transparent">
+              <p class="pb-4 pt-1">
+                Yes. On the Punjab OCAS portal, candidates can submit applications to multiple departments (e.g. BS Computer Science, BS Physics, and BS Mathematics). A separate processing challan of Rs. 100/- must be deposited for each individual discipline choice. If selected in multiple lists, you may choose your preferred program before fee clearance.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 3 -->
+          <div class="border border-stone-200 rounded-lg bg-white overflow-hidden transition-all duration-200">
+            <button 
+              type="button" 
+              class="faq-button w-full px-6 py-4 text-left flex items-center justify-between text-stone-900 font-bold text-sm hover:text-emerald-950 focus:outline-none"
+              aria-expanded="false"
+            >
+              <span>What original documents are required during physical verification?</span>
+              <svg class="faq-icon w-4 h-4 text-stone-500 transform transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="faq-answer max-h-0 overflow-hidden px-6 text-xs text-stone-600 leading-relaxed border-t border-transparent">
+              <p class="pb-4 pt-1">
+                Candidates appearing on the merit list must present: (1) Original Matric and Intermediate Result Cards, (2) Original Character Certificate from the head of the previous institution, (3) Candidate's original CNIC or NADRA B-Form, (4) Father's / Guardian's CNIC photocopy, (5) Four passport-sized photographs with blue background, and (6) No Objection Certificate (NOC) if applying from an education board outside BISE Lahore.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 4 -->
+          <div class="border border-stone-200 rounded-lg bg-white overflow-hidden transition-all duration-200">
+            <button 
+              type="button" 
+              class="faq-button w-full px-6 py-4 text-left flex items-center justify-between text-stone-900 font-bold text-sm hover:text-emerald-950 focus:outline-none"
+              aria-expanded="false"
+            >
+              <span>Is hostel accommodation provided on campus for outside students?</span>
+              <svg class="faq-icon w-4 h-4 text-stone-500 transform transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="faq-answer max-h-0 overflow-hidden px-6 text-xs text-stone-600 leading-relaxed border-t border-transparent">
+              <p class="pb-4 pt-1">
+                Govt. Graduate College Pattoki operates primarily as a commuter institution serving students across Pattoki, Habibabad, Chunian, Kasur, and surrounding rural tehsils. On-campus residential hostel facilities are limited and allotted exclusively on distance-based merit to BS students residing beyond a 35 km perimeter.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 5 -->
+          <div class="border border-stone-200 rounded-lg bg-white overflow-hidden transition-all duration-200">
+            <button 
+              type="button" 
+              class="faq-button w-full px-6 py-4 text-left flex items-center justify-between text-stone-900 font-bold text-sm hover:text-emerald-950 focus:outline-none"
+              aria-expanded="false"
+            >
+              <span>What is the policy for age limit relaxation?</span>
+              <svg class="faq-icon w-4 h-4 text-stone-500 transform transition-transform duration-300 flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="faq-answer max-h-0 overflow-hidden px-6 text-xs text-stone-600 leading-relaxed border-t border-transparent">
+              <p class="pb-4 pt-1">
+                The standard upper age limit is 18 years for Intermediate and 24 years for BS 4-Year programs on the closing date of application submission. Age relaxation up to 2 years can be granted by the College Principal under exceptional circumstances upon written appeal. Relaxation beyond 2 years requires sanction from the Vice Chancellor, University of the Punjab / BISE Lahore Chairman.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 10. CAMPUS ADMISSION DESK & ASSISTANCE CALLOUT                            -->
+    <!-- ========================================================================= -->
+    <section class="py-14 px-6 sm:px-8 bg-white border-b border-stone-200">
+      <div class="max-w-7xl mx-auto bg-[#F5F2EB] rounded-2xl p-8 sm:p-10 border border-stone-300/80 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div>
+          <span class="text-xs uppercase tracking-widest font-bold text-emerald-900">Need Guidance with Your Application?</span>
+          <h2 class="text-2xl font-extrabold text-stone-900 mt-1">Visit the On-Campus Admissions Directorate</h2>
+          <p class="text-xs sm:text-sm text-stone-600 mt-2 max-w-xl leading-relaxed">
+            Our admissions counselors and verification officers are available in the Administrative Block, Room 104, Monday through Saturday from 8:30 AM to 2:00 PM.
+          </p>
+        </div>
+        <div class="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-4 flex-shrink-0">
+          <a 
+            href="tel:+92494421234" 
+            class="px-5 py-2.5 bg-white hover:bg-stone-50 text-emerald-950 font-bold text-xs uppercase tracking-wider rounded border border-stone-300 shadow-sm transition-colors"
+          >
+            Call: (049) 442-1234
+          </a>
+          <a 
+            href="contact.html" 
+            class="px-5 py-2.5 bg-emerald-900 hover:bg-emerald-950 text-white font-bold text-xs uppercase tracking-wider rounded transition-colors shadow-sm"
+          >
+            Campus Directory &rarr;
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- 11. REFINED WARM BEIGE FOOTER (Exact Match to index, about, academics)     -->
+  <!-- ========================================================================= -->
+  <footer class="bg-[#F5F2EB] text-stone-700 pt-16 pb-12 border-t border-stone-300">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-stone-300/80">
+        
+        <!-- Column 1: Institutional Crest & Identity -->
+        <div class="space-y-3">
+          <img 
+            src="./logo.png" 
+            alt="Govt. Graduate College Pattoki" 
+            class="h-10 w-auto object-contain"
+            onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 48 48\' fill=\'%23064E3B\'><circle cx=\'24\' cy=\'24\' r=\'22\' fill=\'%23064E3B\'/><path d=\'M24 12L36 18L24 24L12 18L24 12Z\' fill=\'%23FFFFFF\'/><path d=\'M16 22V28C16 32.4 19.6 36 24 36C28.4 36 32 32.4 32 28V22L24 26L16 22Z\' fill=\'%23FFFFFF\'/></svg>';"
+          >
+          <p class="text-xs text-stone-600 leading-relaxed">
+            Govt. Graduate College Pattoki (Kasur District, Punjab). Committed to academic integrity, scientific inquiry, and regional leadership since 1970.
+          </p>
+        </div>
+
+        <!-- Column 2: Navigation Links -->
+        <div>
+          <h4 class="text-xs uppercase tracking-widest font-bold text-emerald-950 mb-3">Site Pages</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="index.html" class="hover:text-emerald-950 transition-colors">Home Page</a></li>
+            <li><a href="about.html" class="hover:text-emerald-950 transition-colors">About the College</a></li>
+            <li><a href="academics.html" class="hover:text-emerald-950 transition-colors">Academic Programs</a></li>
+            <li><a href="admissions.html" class="hover:text-emerald-950 transition-colors font-bold text-emerald-950">Admissions & Merit</a></li>
+            <li><a href="sports.html" class="hover:text-emerald-950 transition-colors">Sports & Athletics</a></li>
+            <li><a href="contact.html" class="hover:text-emerald-950 transition-colors">Contact Administration</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Contact Details -->
+        <div>
+          <h4 class="text-xs uppercase tracking-widest font-bold text-emerald-950 mb-3">Campus Office</h4>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            College Road, Pattoki,<br>
+            District Kasur, Punjab, Pakistan.<br>
+            <span class="block mt-2">Telephone: <a href="tel:+92494421234" class="text-emerald-950 font-semibold">+92 (49) 442-1234</a></span>
+            <span>Email: <a href="mailto:info@ggcpattoki.edu.pk" class="text-emerald-950 font-semibold">info@ggcpattoki.edu.pk</a></span>
+          </p>
+        </div>
+
+        <!-- Column 4: Affiliation & Governance -->
+        <div>
+          <h4 class="text-xs uppercase tracking-widest font-bold text-emerald-950 mb-3">Governance</h4>
+          <p class="text-xs text-stone-600 leading-relaxed">
+            Higher Education Department, Government of the Punjab.<br>
+            Affiliated with <strong>University of the Punjab, Lahore</strong>.<br>
+            Board of Intermediate & Secondary Education Lahore.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Bottom Sub-Footer -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-500 gap-4">
+        <p>&copy; 2025 Govt. Graduate College Pattoki. All rights reserved.</p>
+        <p class="font-mono text-[11px] uppercase text-emerald-950 font-bold">Autonomous Public Sector Higher Education Institution</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- JAVASCRIPT: NAVIGATION, ELIGIBILITY TABS & ACCORDION BEHAVIORS             -->
+  <!-- ========================================================================= -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Mobile Navigation Drawer Toggle
+      const toggleBtn = document.getElementById('mobile-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const hamburgerIcon = document.getElementById('hamburger-icon');
+      const closeIcon = document.getElementById('close-icon');
+
+      if (toggleBtn && mobileMenu) {
+        toggleBtn.addEventListener('click', () => {
+          const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+          toggleBtn.setAttribute('aria-expanded', String(!isExpanded));
+          mobileMenu.classList.toggle('hidden');
+          hamburgerIcon.classList.toggle('hidden');
+          closeIcon.classList.toggle('hidden');
+        });
+      }
+
+      // 2. Eligibility Criteria Tab Switching
+      const tabs = [
+        { btn: document.getElementById('tab-btn-inter'), panel: document.getElementById('tab-panel-inter') },
+        { btn: document.getElementById('tab-btn-bs'), panel: document.getElementById('tab-panel-bs') },
+        { btn: document.getElementById('tab-btn-quota'), panel: document.getElementById('tab-panel-quota') }
+      ];
+
+      tabs.forEach(({ btn, panel }) => {
+        if (!btn || !panel) return;
+        btn.addEventListener('click', () => {
+          tabs.forEach(({ btn: b, panel: p }) => {
+            if (b === btn) {
+              b.setAttribute('aria-selected', 'true');
+              b.className = 'px-5 py-2.5 rounded-md text-xs uppercase tracking-wider font-bold transition-all bg-white text-emerald-950 shadow-sm';
+              p.classList.remove('hidden');
+              p.classList.add('block');
+            } else {
+              b.setAttribute('aria-selected', 'false');
+              b.className = 'px-5 py-2.5 rounded-md text-xs uppercase tracking-wider font-semibold text-stone-600 hover:text-emerald-950 transition-all';
+              p.classList.remove('block');
+              p.classList.add('hidden');
+            }
+          });
+        });
+      });
+
+      // 3. FAQ Accordion Behavior
+      const faqButtons = document.querySelectorAll('.faq-button');
+      faqButtons.forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+          const answer = btn.nextElementSibling;
+          const icon = btn.querySelector('.faq-icon');
+
+          // Optional: Close other open accordion items
+          faqButtons.forEach((otherBtn) => {
+            if (otherBtn !== btn) {
+              otherBtn.setAttribute('aria-expanded', 'false');
+              const otherAnswer = otherBtn.nextElementSibling;
+              const otherIcon = otherBtn.querySelector('.faq-icon');
+              if (otherAnswer) otherAnswer.style.maxHeight = null;
+              if (otherIcon) otherIcon.classList.remove('rotate-180');
+            }
+          });
+
+          // Toggle current item
+          if (!isExpanded) {
+            btn.setAttribute('aria-expanded', 'true');
+            if (answer) answer.style.maxHeight = answer.scrollHeight + 'px';
+            if (icon) icon.classList.add('rotate-180');
+          } else {
+            btn.setAttribute('aria-expanded', 'false');
+            if (answer) answer.style.maxHeight = null;
+            if (icon) icon.classList.remove('rotate-180');
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
